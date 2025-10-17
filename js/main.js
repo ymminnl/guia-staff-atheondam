@@ -541,51 +541,90 @@ function addPrintButton() {
 document.addEventListener('DOMContentLoaded', addPrintButton);
 
 // ============================================
-// MOBILE MENU & SIDEBAR TOGGLE
+// SIDEBAR TOGGLE - PC & MÓVIL
 // ============================================
 
-// Función ULTRA SIMPLE para toggle móvil
+// MÓVIL: Toggle del sidebar
 window.toggleMobileMenuGlobal = function() {
-    console.log('🌍 MOBILE TOGGLE CLICKED!');
+    console.log('═══════════════════════════════════════');
+    console.log('🌍 MOBILE TOGGLE EJECUTADO');
+    console.log('═══════════════════════════════════════');
+    
     const sidebar = document.querySelector('.sidebar');
     const overlay = document.getElementById('sidebarOverlay');
     const body = document.body;
     
-    console.log('Elements found:', { sidebar: !!sidebar, overlay: !!overlay });
+    // Verificar elementos
+    console.log('📋 Verificación de elementos:');
+    console.log('  - Sidebar:', sidebar ? '✅ ENCONTRADO' : '❌ NO ENCONTRADO');
+    console.log('  - Overlay:', overlay ? '✅ ENCONTRADO' : '❌ NO ENCONTRADO');
+    console.log('  - Body:', body ? '✅ ENCONTRADO' : '❌ NO ENCONTRADO');
     
-    if (!sidebar || !overlay) {
-        console.error('❌ Missing elements!');
+    if (!sidebar) {
+        console.error('❌ SIDEBAR NO EXISTE EN EL DOM!');
+        console.log('Intentando buscar con ID...');
+        const sidebarById = document.getElementById('sidebar');
+        console.log('Sidebar por ID:', sidebarById ? 'ENCONTRADO' : 'NO ENCONTRADO');
         return;
     }
     
-    const isOpen = sidebar.classList.contains('open');
-    console.log('Current state:', isOpen ? 'OPEN' : 'CLOSED');
+    if (!overlay) {
+        console.error('❌ OVERLAY NO EXISTE EN EL DOM!');
+        return;
+    }
     
-    if (isOpen) {
+    // Verificar estado actual
+    const tieneClaseOpen = sidebar.classList.contains('open');
+    console.log('\n📊 Estado ANTES del toggle:');
+    console.log('  - sidebar.classList:', sidebar.classList.toString());
+    console.log('  - Tiene clase "open":', tieneClaseOpen);
+    console.log('  - overlay.classList:', overlay.classList.toString());
+    console.log('  - body.style.overflow:', body.style.overflow || 'normal');
+    
+    // TOGGLE
+    if (tieneClaseOpen) {
+        // CERRAR
+        console.log('\n🔴 CERRANDO sidebar...');
         sidebar.classList.remove('open');
         overlay.classList.remove('active');
         body.classList.remove('sidebar-open');
         body.style.overflow = '';
-        console.log('✅ CLOSED sidebar');
+        console.log('✅ Sidebar CERRADO');
     } else {
+        // ABRIR
+        console.log('\n🟢 ABRIENDO sidebar...');
         sidebar.classList.add('open');
         overlay.classList.add('active');
         body.classList.add('sidebar-open');
         body.style.overflow = 'hidden';
-        console.log('✅ OPENED sidebar');
+        console.log('✅ Sidebar ABIERTO');
     }
+    
+    // Verificar estado después
+    console.log('\n📊 Estado DESPUÉS del toggle:');
+    console.log('  - sidebar.classList:', sidebar.classList.toString());
+    console.log('  - overlay.classList:', overlay.classList.toString());
+    console.log('  - body.style.overflow:', body.style.overflow || 'normal');
+    console.log('═══════════════════════════════════════\n');
 };
 
-// Función para toggle del sidebar en PC
+// PC: Toggle del sidebar
 window.toggleSidebarPC = function() {
-    console.log('💻 PC TOGGLE CLICKED!');
+    console.log('💻 PC SIDEBAR TOGGLE');
     const body = document.body;
     const sidebar = document.querySelector('.sidebar');
+    
+    if (!sidebar) {
+        console.error('❌ Sidebar no encontrado');
+        return;
+    }
+    
+    const estabaCerrado = body.classList.contains('sidebar-collapsed');
     
     body.classList.toggle('sidebar-collapsed');
     sidebar.classList.toggle('collapsed');
     
-    console.log('Sidebar state:', body.classList.contains('sidebar-collapsed') ? 'COLLAPSED' : 'EXPANDED');
+    console.log('Estado:', estabaCerrado ? 'ABIERTO ✅' : 'CERRADO ❌');
 };
 
 function initMobileMenu() {
