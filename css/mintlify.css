@@ -684,6 +684,26 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     transform: rotate(180deg);
 }
 
+/* DESKTOP: Sidebar cerrado por defecto (solo en escritorio) */
+@media (min-width: 1025px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+        max-width: 100% !important;
+    }
+    
+    .sidebar-toggle-btn {
+        left: 20px;
+    }
+    
+    .sidebar-toggle-btn svg {
+        transform: rotate(180deg);
+    }
+}
+
 /* ========================================
    MAIN CONTENT - PREMIUM LAYOUT
    ======================================== */
@@ -1221,6 +1241,7 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     border-collapse: separate;
     border-spacing: 0;
     font-size: var(--font-size-sm);
+    table-layout: fixed; /* CRÍTICO: Forzar anchos de columnas */
 }
 
 .table thead {
@@ -1253,19 +1274,17 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 /* Ancho de columnas específico */
 .table th:nth-child(1),
 .table td:nth-child(1) {
-    width: 35%;
-    min-width: 200px;
+    width: 38%; /* COMANDO: más ancho para código */
 }
 
 .table th:nth-child(2),
 .table td:nth-child(2) {
-    width: 30%;
+    width: 27%; /* DESCRIPCIÓN: más compacto */
 }
 
 .table th:nth-child(3),
 .table td:nth-child(3) {
-    width: 35%;
-    min-width: 200px;
+    width: 35%; /* EJEMPLO: código de ejemplo */
 }
 
 .table td {
@@ -2201,28 +2220,32 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 @media (max-width: 1024px) {
     /* Ocultar botón toggle de PC en móvil */
     .sidebar-toggle-btn {
-        display: none;
+        display: none !important;
     }
     
+    /* MÓVIL: Sidebar oculto por defecto */
     .sidebar {
-        transform: translateX(-100%);
-        transition: transform var(--transition-base);
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1000;
         box-shadow: none;
-        animation: none; /* Desactivar animación en móvil */
+        animation: none;
     }
     
+    /* MÓVIL: Sidebar abierto con clase .open */
     .sidebar.open {
-        transform: translateX(0);
-        box-shadow: var(--shadow-2xl);
+        transform: translateX(0) !important;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     }
     
     .mobile-menu-btn {
-        display: flex;
+        display: flex !important;
     }
     
+    /* MÓVIL: Contenido sin margen */
     .main-content {
-        margin-left: 0;
+        margin-left: 0 !important;
+        max-width: 100% !important;
         padding: var(--spacing-2xl) var(--spacing-lg);
     }
     
@@ -2407,7 +2430,9 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     
     .table {
         font-size: 0.75rem;
-        display: block;
+        display: table; /* Mantener como tabla */
+        width: 100%;
+        table-layout: fixed; /* MANTENER anchos fijos */
         overflow-x: visible;
     }
     
@@ -2416,6 +2441,7 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
         padding: var(--spacing-sm) var(--spacing-md);
         font-size: 0.7rem;
         word-break: break-word;
+        overflow-wrap: break-word;
     }
     
     .table th {
@@ -2423,24 +2449,20 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
         font-weight: 700;
     }
     
-    /* Responsive table layout */
-    .table thead {
-        display: table;
-        width: 100%;
+    /* MANTENER anchos de columnas en móvil */
+    .table th:nth-child(1),
+    .table td:nth-child(1) {
+        width: 38%;
     }
     
-    .table tbody {
-        display: table;
-        width: 100%;
+    .table th:nth-child(2),
+    .table td:nth-child(2) {
+        width: 27%;
     }
     
-    .table tr {
-        display: table-row;
-    }
-    
-    .table th,
-    .table td {
-        display: table-cell;
+    .table th:nth-child(3),
+    .table td:nth-child(3) {
+        width: 35%;
     }
     
     .callout {
