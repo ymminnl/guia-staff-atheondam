@@ -1240,6 +1240,7 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 
 .table {
     width: 100%;
+    table-layout: fixed; /* FORZAR distribución de anchos */
     border-collapse: collapse;
     border-spacing: 0;
     font-size: 0.875rem;
@@ -1247,9 +1248,6 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 
 .table thead {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
 .table thead::after {
@@ -1273,22 +1271,13 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     border-bottom: 2px solid var(--color-border);
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
     white-space: nowrap;
+    vertical-align: middle;
 }
 
-/* Primera columna: COMANDO */
-.table th:first-child {
-    width: 35%;
-}
-
-/* Segunda columna: DESCRIPCIÓN */
-.table th:nth-child(2) {
-    width: 35%;
-}
-
-/* Tercera columna: EJEMPLO */
-.table th:last-child {
-    width: 30%;
-}
+/* Anchos de columnas */
+.table th:nth-child(1) { width: 35%; }
+.table th:nth-child(2) { width: 35%; }
+.table th:nth-child(3) { width: 30%; }
 
 .table td {
     padding: 1rem 1.5rem;
@@ -1296,44 +1285,17 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     color: var(--color-text-secondary);
     line-height: 1.8;
     vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Primera columna: COMANDO */
-.table td:first-child {
+.table td:nth-child(1) {
     font-weight: 600;
     color: var(--color-text-primary);
-    width: 35%;
-}
-
-/* Segunda columna: DESCRIPCIÓN */
-.table td:nth-child(2) {
-    width: 35%;
-}
-
-/* Tercera columna: EJEMPLO */
-.table td:last-child {
-    width: 30%;
 }
 
 .table tbody tr {
-    transition: all 0.2s ease;
-    position: relative;
-}
-
-.table tbody tr::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
-    transform: scaleY(0);
-    transition: transform 0.2s ease;
-}
-
-.table tbody tr:hover::before {
-    transform: scaleY(1);
+    transition: background-color 0.2s ease;
 }
 
 .table tbody tr:last-child td {
