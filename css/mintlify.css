@@ -672,6 +672,8 @@ body.sidebar-collapsed .sidebar {
 
 body.sidebar-collapsed .main-content {
     margin-left: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 body.sidebar-collapsed .sidebar-toggle-btn {
@@ -688,8 +690,9 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 .main-content {
     flex: 1;
     margin-left: var(--sidebar-width);
-    padding: var(--spacing-4xl) var(--spacing-2xl);
-    max-width: calc(var(--content-max-width) + var(--sidebar-width));
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+    max-width: calc(100% - var(--sidebar-width));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     animation: fadeInUp 0.8s ease-out;
 }
 
@@ -1247,6 +1250,24 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     vertical-align: middle;
 }
 
+/* Ancho de columnas específico */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width: 35%;
+    min-width: 200px;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 30%;
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+    width: 35%;
+    min-width: 200px;
+}
+
 .table td {
     padding: var(--spacing-md) var(--spacing-lg);
     border-bottom: 1px solid var(--color-border-light);
@@ -1254,6 +1275,7 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     line-height: 1.6;
     transition: all var(--transition-fast);
     vertical-align: middle;
+    word-wrap: break-word;
 }
 
 .table tbody tr {
@@ -2231,6 +2253,10 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     
     .sidebar {
         animation: none;
+    }
+    
+    .sidebar-section {
+        animation: none !important;
     }
     
     .hero-title,
