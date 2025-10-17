@@ -1,0 +1,564 @@
+/* ============================================
+   AtheOneDam Staff Guide - Main Styles
+   Version 2.0 - Octubre 2025
+   ============================================ */
+
+/* === PRINT SETTINGS === */
+@page {
+    margin: 2cm;
+}
+
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.65;
+    color: #1f2937;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* === TYPOGRAPHY === */
+h1 {
+    color: #0f172a;
+    font-size: 3.5em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0f172a;
+    font-size: 2.25em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 80px;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+h3 {
+    color: #1e293b;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+h4 {
+    color: #334155;
+    font-size: 1.125em;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    text-transform: none;
+}
+
+/* === HEADER === */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 30px;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header h1 {
+    color: #1a1a1a;
+    border: none;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+.meta-info {
+    text-align: center;
+    color: #757575;
+    margin-top: 10px;
+    font-size: 0.95em;
+    font-weight: 400;
+}
+
+/* === CODE BLOCKS === */
+code {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+    font-size: 0.875em;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+}
+
+pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 24px;
+    border-radius: 12px;
+    overflow-x: auto;
+    font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+    line-height: 1.7;
+    margin: 24px 0;
+}
+
+pre code {
+    background: transparent;
+    color: #e2e8f0;
+    padding: 0;
+    border: none;
+}
+
+/* === TABLES === */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 32px 0;
+    font-size: 0.9375em;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th {
+    background: #f8fafc;
+    color: #475569;
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8125em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* === INFO BOXES === */
+.info-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+    border: 1px solid #3b82f6;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 32px 0;
+    color: #1e40af;
+}
+
+.warning-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%);
+    border: 1px solid #f59e0b;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 32px 0;
+    color: #92400e;
+}
+
+.danger-box {
+    background: linear-gradient(135deg, #fee2e2 0%, #fef2f2 100%);
+    border: 1px solid #ef4444;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 32px 0;
+    color: #991b1b;
+}
+
+.success-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    border: 1px solid #10b981;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 32px 0;
+    color: #065f46;
+}
+
+/* === LISTS === */
+ul, ol {
+    margin: 20px 0;
+    padding-left: 30px;
+    line-height: 1.8;
+}
+
+li {
+    margin: 10px 0;
+}
+
+li strong {
+    font-weight: 600;
+}
+
+/* === LINKS === */
+a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* === TABLE OF CONTENTS === */
+.toc {
+    background: #fafafa;
+    padding: 24px;
+    margin: 40px 0;
+    border-left: 3px solid #667eea;
+}
+
+.toc h2 {
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc li {
+    margin: 8px 0;
+}
+
+.toc a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+/* === COMMAND EXAMPLES === */
+.command-example {
+    background: #2d2d2d;
+    color: #4caf50;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 15px 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    border: 1px solid #404040;
+    font-size: 0.95em;
+}
+
+/* === BADGES === */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.8125em;
+    font-weight: 600;
+    margin: 0 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.badge-helper {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #3b82f6;
+}
+
+.badge-moderator {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+.badge-admin {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #f59e0b;
+}
+
+.badge-permanent {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+}
+
+.badge-ip {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+
+/* === HERO SECTION === */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 40px;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3.5em;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 1.25em;
+    opacity: 0.95;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 24px;
+}
+
+.hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.9;
+    font-size: 0.95em;
+}
+
+/* === CONTENT SECTIONS === */
+.content-section {
+    padding: 60px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+}
+
+/* === CATEGORY HEADERS WITH ICONS === */
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 32px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    margin: 48px 0 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.category-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.category-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.category-content {
+    flex: 1;
+}
+
+.category-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+}
+
+.category-count {
+    font-size: 0.875em;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Ban Category */
+.category-ban .category-icon {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+}
+.category-ban .category-icon svg {
+    stroke: #dc2626;
+}
+.category-ban .category-title {
+    color: #dc2626;
+}
+
+/* Mute Category */
+.category-mute .category-icon {
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+}
+.category-mute .category-icon svg {
+    stroke: #ea580c;
+}
+.category-mute .category-title {
+    color: #ea580c;
+}
+
+/* Warn Category */
+.category-warn .category-icon {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+.category-warn .category-icon svg {
+    stroke: #d97706;
+}
+.category-warn .category-title {
+    color: #d97706;
+}
+
+/* Kick Category */
+.category-kick .category-icon {
+    background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%);
+}
+.category-kick .category-icon svg {
+    stroke: #2563eb;
+}
+.category-kick .category-title {
+    color: #2563eb;
+}
+
+/* === CARDS === */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.2s ease;
+}
+
+.feature-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.feature-card h4 {
+    margin-top: 0;
+    color: #0f172a;
+    font-size: 1.125em;
+}
+
+.feature-card p {
+    color: #64748b;
+    margin: 8px 0 0;
+}
+
+.page-break {
+    page-break-after: always;
+    margin: 80px 0;
+}
+
+/* === PRINT STYLES === */
+@media print {
+    @page {
+        margin: 2cm;
+    }
+    
+    body {
+        background: white;
+        font-size: 11pt;
+    }
+    
+    .container {
+        box-shadow: none;
+        border-top: none;
+    }
+    
+    /* Evitar saltos de página dentro de elementos */
+    h2, h3, h4 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+    
+    table, .category-header, .feature-card, .info-box, .warning-box, .danger-box, .success-box {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    tr {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    /* Mantener títulos con su contenido */
+    h2, h3, h4 {
+        page-break-before: auto;
+        page-break-after: avoid;
+        break-before: auto;
+        break-after: avoid;
+    }
+    
+    /* Hero section más compacto para impresión */
+    .hero {
+        padding: 40px 20px;
+        page-break-after: avoid;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    
+    /* Tablas más compactas */
+    table {
+        font-size: 0.9em;
+        page-break-before: auto;
+    }
+    
+    /* Feature grid en impresión */
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        page-break-inside: avoid;
+    }
+    
+    /* Footer en última página */
+    footer {
+        page-break-before: always;
+    }
+    
+    /* Ocultar elementos decorativos en impresión */
+    .hero-meta {
+        display: none;
+    }
+}
