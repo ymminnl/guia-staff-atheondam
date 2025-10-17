@@ -537,4 +537,67 @@ function addPrintButton() {
 // Initialize print button
 document.addEventListener('DOMContentLoaded', addPrintButton);
 
+// ============================================
+// MOBILE MENU
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const body = document.body;
+    
+    if (!mobileMenuBtn || !sidebar || !sidebarOverlay) return;
+    
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        sidebar.classList.toggle('open');
+        sidebarOverlay.classList.toggle('active');
+        body.classList.toggle('sidebar-open');
+        
+        // Prevent body scroll when sidebar is open
+        if (sidebar.classList.contains('open')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+    }
+    
+    // Close mobile menu
+    function closeMobileMenu() {
+        sidebar.classList.remove('open');
+        sidebarOverlay.classList.remove('active');
+        body.classList.remove('sidebar-open');
+        body.style.overflow = '';
+    }
+    
+    // Event listeners
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    sidebarOverlay.addEventListener('click', closeMobileMenu);
+    
+    // Close menu when clicking a sidebar link
+    const sidebarLinks = sidebar.querySelectorAll('.sidebar-link');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Close menu on window resize if screen gets larger
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (window.innerWidth > 1024 && sidebar.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        }, 250);
+    });
+});
+
 console.log('✓ AtheOneDam Staff Guide loaded successfully');
