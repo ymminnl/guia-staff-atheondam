@@ -906,9 +906,10 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
-    transform: scaleX(0);
+    transform: scaleX(0); /* ✅ OCULTO por defecto */
     transform-origin: left;
     transition: transform var(--transition-slow);
+    opacity: 0; /* ✅ AÑADIDO para asegurar que esté invisible */
 }
 
 .card:hover {
@@ -919,6 +920,7 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 
 .card:hover::before {
     transform: scaleX(1);
+    opacity: 1; /* ✅ VISIBLE al hacer hover */
 }
 
 .card-icon {
