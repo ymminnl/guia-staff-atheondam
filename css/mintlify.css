@@ -216,7 +216,7 @@ code {
     border-bottom: 1px solid var(--color-divider);
     z-index: 1000;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02);
-    animation: slideDown 0.5s var(--transition-bounce);
+    /* animation: slideDown 0.5s var(--transition-bounce); */ /* DESACTIVADA */
 }
 
 @keyframes slideDown {
@@ -390,8 +390,8 @@ code {
     display: none;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     background: transparent;
     border: 2px solid var(--color-border);
     border-radius: var(--radius-md);
@@ -399,6 +399,8 @@ code {
     transition: all var(--transition-base);
     position: relative;
     z-index: 1001;
+    flex-shrink: 0;
+    margin-right: var(--spacing-md);
 }
 
 .mobile-menu-btn:hover {
@@ -484,7 +486,7 @@ code {
     padding: var(--spacing-2xl) 0;
     scrollbar-width: thin;
     scrollbar-color: var(--color-primary-light) transparent;
-    animation: slideInLeft 0.6s var(--transition-bounce);
+    /* animation: slideInLeft 0.6s var(--transition-bounce); */ /* DESACTIVADA */
 }
 
 @keyframes slideInLeft {
