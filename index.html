@@ -11,1020 +11,1149 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ymminnl.github.io/guia-staff-atheondam/">
     
-    <title>Guía de Moderación - LiteBans AtheOneDam</title>
+    <title>Guía de Staff - AtheOneDam</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- External CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mintlify.css">
 </head>
 <body>
-    <div class="hero">
-        <h1>Guía de Moderación</h1>
-        <p class="hero-subtitle">Sistema completo de sanciones y comandos para el equipo de staff de AtheOneDam</p>
-        <div class="hero-meta">
-            <div class="hero-meta-item">
-                <span>🔲</span>
-                <span>LiteBans v2.18.6</span>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <div class="navbar-logo">A</div>
+                <span class="navbar-title">AtheOneDam Staff</span>
             </div>
-            <div class="hero-meta-item">
-                <span>🎯</span>
-                <span>52 Templates</span>
+            <div class="navbar-search">
+                <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="text" placeholder="Buscar... (presiona /)" class="search-input" id="globalSearch">
             </div>
-            <div class="hero-meta-item">
-                <span>📅</span>
-                <span>Octubre 2025</span>
-            </div>
+            <button class="btn-primary" onclick="window.print()">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                </svg>
+                PDF
+            </button>
         </div>
+    </nav>
+
+    <div class="layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <div class="sidebar-label">INTRODUCCIÓN</div>
+                    <a href="#principios" class="sidebar-link active">Principios Fundamentales</a>
+                </div>
+                
+                <div class="sidebar-section">
+                    <div class="sidebar-label">COMANDOS</div>
+                    <a href="#comandos-helper" class="sidebar-link">Comandos Helper</a>
+                    <a href="#comandos-moderator" class="sidebar-link">Comandos Moderator</a>
+                </div>
+                
+                <div class="sidebar-section">
+                    <div class="sidebar-label">TEMPLATES</div>
+                    <a href="#templates-ban" class="sidebar-link">Ban Templates</a>
+                    <a href="#templates-mute" class="sidebar-link">Mute Templates</a>
+                    <a href="#templates-warn" class="sidebar-link">Warn Templates</a>
+                    <a href="#templates-kick" class="sidebar-link">Kick Templates</a>
+                </div>
+                
+                <div class="sidebar-section">
+                    <div class="sidebar-label">GUÍAS</div>
+                    <a href="#procedimiento" class="sidebar-link">Procedimiento Completo</a>
+                    <a href="#ejemplos" class="sidebar-link">Ejemplos Prácticos</a>
+                    <a href="#faq" class="sidebar-link">FAQ</a>
+                </div>
+                
+                <div class="sidebar-section">
+                    <div class="sidebar-label">RESUMEN</div>
+                    <a href="#resumen" class="sidebar-link">Por Rango</a>
+                    <a href="#recordatorios" class="sidebar-link">Recordatorios Críticos</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Hero -->
+            <div class="hero-section">
+                <div class="badge-group">
+                    <span class="badge badge-purple">LiteBans v2.18.6</span>
+                    <span class="badge badge-blue">52 Templates</span>
+                    <span class="badge badge-green">Octubre 2025</span>
+                </div>
+                <h1 class="hero-title">Guía de Moderación</h1>
+                <p class="hero-description">Sistema completo de sanciones y comandos para el equipo de staff de AtheOneDam</p>
+            </div>
+
+            <!-- Principios Fundamentales -->
+            <section id="principios" class="content-section">
+                <h2 class="section-title">Principios Fundamentales</h2>
+                <p class="section-description">Reglas básicas que todo miembro del staff debe seguir</p>
+                
+                <div class="card-grid">
+                    <div class="card card-info">
+                        <div class="card-icon">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <h3>Solo Templates</h3>
+                        <p>No puedes crear castigos personalizados. Debes usar exclusivamente las plantillas predefinidas del sistema.</p>
+                    </div>
+
+                    <div class="card card-warning">
+                        <div class="card-icon">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <h3>Investiga Primero</h3>
+                        <p>Siempre revisa el historial del jugador con <code>/history</code> antes de aplicar cualquier sanción.</p>
+                    </div>
+
+                    <div class="card card-danger">
+                        <div class="card-icon">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                        </div>
+                        <h3>Evidencia Obligatoria</h3>
+                        <p>Cada sanción debe tener evidencias en Discord (#sanciones-evidencias) con capturas o videos en un hilo.</p>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning">
+                    <div class="callout-title">Procedimiento de Evidencias</div>
+                    <ol class="callout-list">
+                        <li>Aplicas la sanción en el servidor</li>
+                        <li>El webhook envía mensaje automático a <strong>#sanciones-evidencias</strong></li>
+                        <li><strong>TÚ DEBES crear un HILO</strong> en ese mensaje</li>
+                        <li>Sube capturas/videos en el hilo como evidencia</li>
+                        <li>El mensaje del webhook + el hilo quedan registrados permanentemente</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Comandos -->
+            <section id="comandos-helper" class="content-section">
+                <h2 class="section-title">Comandos Disponibles</h2>
+                
+                <div class="callout callout-info">
+                    <div class="callout-title">Sistema de Escalamiento Automático</div>
+                    <p>3 warns = Kick automático | 5 warns = Ban 1 día | 7 warns = Ban 7 días</p>
+                </div>
+
+                <div class="subsection-header helper">
+                    <div class="subsection-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Comandos Helper</h3>
+                        <p>Warn y Kick únicamente</p>
+                    </div>
+                </div>
+
+                <h4 class="subsection-title">Sanciones</h4>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Comando</th>
+                                <th>Descripción</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>/warn &lt;jugador&gt; &lt;template&gt;</code></td>
+                                <td>Advertir a un jugador</td>
+                                <td><code>/warn Player Comportamiento</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/kick &lt;jugador&gt; &lt;template&gt;</code></td>
+                                <td>Expulsar a un jugador</td>
+                                <td><code>/kick Player Spam-Rapido</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="subsection-title">Consulta de Sanciones</h4>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Comando</th>
+                                <th>Descripción</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>/history &lt;jugador&gt;</code></td>
+                                <td>Ver historial completo de sanciones</td>
+                                <td><code>/history Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/checkban &lt;jugador&gt;</code></td>
+                                <td>Verificar si está baneado</td>
+                                <td><code>/checkban Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/checkmute &lt;jugador&gt;</code></td>
+                                <td>Verificar si está silenciado</td>
+                                <td><code>/checkmute Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/checkwarn &lt;jugador&gt;</code></td>
+                                <td>Ver advertencias activas</td>
+                                <td><code>/checkwarn Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/warnings &lt;jugador&gt;</code></td>
+                                <td>Lista de advertencias</td>
+                                <td><code>/warnings Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/dupeip &lt;jugador&gt;</code></td>
+                                <td>Ver multicuentas (alts)</td>
+                                <td><code>/dupeip Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/iphistory &lt;jugador&gt;</code></td>
+                                <td>Ver historial de IPs</td>
+                                <td><code>/iphistory Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/geoip &lt;jugador|IP&gt;</code></td>
+                                <td>Ver ubicación geográfica</td>
+                                <td><code>/geoip Player</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="subsection-title">Utilidades</h4>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Comando</th>
+                                <th>Descripción</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>/tp &lt;jugador&gt;</code></td>
+                                <td>Teleportarte a un jugador</td>
+                                <td><code>/tp Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/freeze &lt;jugador&gt;</code></td>
+                                <td>Congelar/descongelar jugador</td>
+                                <td><code>/freeze Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/invsee &lt;jugador&gt;</code></td>
+                                <td>Ver inventario de jugador</td>
+                                <td><code>/invsee Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/enderchest &lt;jugador&gt;</code></td>
+                                <td>Ver ender chest de jugador</td>
+                                <td><code>/enderchest Player</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/vanish</code></td>
+                                <td>Activar/desactivar modo invisible</td>
+                                <td><code>/vanish</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/socialspy</code></td>
+                                <td>Ver mensajes privados de jugadores</td>
+                                <td><code>/socialspy</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/staffchat &lt;mensaje&gt;</code></td>
+                                <td>Enviar mensaje al chat de staff</td>
+                                <td><code>/sc Ayuda con Player</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Comandos Moderator -->
+            <section id="comandos-moderator" class="content-section">
+                <div class="subsection-header moderator">
+                    <div class="subsection-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Comandos Moderator</h3>
+                        <p>Todos los comandos de Helper + Ban y Mute</p>
+                    </div>
+                </div>
+
+                <h4 class="subsection-title">Sanciones Adicionales</h4>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Comando</th>
+                                <th>Descripción</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>/ban &lt;jugador&gt; &lt;template&gt;</code></td>
+                                <td>Banear jugador (máx 1 mes)</td>
+                                <td><code>/ban Player Hacks</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/tempban &lt;jugador&gt; &lt;template&gt;</code></td>
+                                <td>Ban temporal (usa templates)</td>
+                                <td><code>/tempban Player Fly</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/mute &lt;jugador&gt; &lt;template&gt;</code></td>
+                                <td>Silenciar jugador (máx 1 mes)</td>
+                                <td><code>/mute Player Spam</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/tempmute &lt;jugador&gt; &lt;template&gt;</code></td>
+                                <td>Mute temporal (usa templates)</td>
+                                <td><code>/tempmute Player Insultos</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout callout-danger">
+                    <div class="callout-title">Importante</div>
+                    <p>Consulta con admins antes de remover castigos. Siempre proporciona una razón detallada.</p>
+                </div>
+            </section>
+
+            <!-- Templates: Ban -->
+            <section id="templates-ban" class="content-section">
+                <h2 class="section-title">Templates de Ban</h2>
+                <p class="section-description">15 plantillas predefinidas para baneos (máximo 30 días para Moderator)</p>
+                
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Template</th>
+                                <th>Duración</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>Hacks</code></td>
+                                <td>30d</td>
+                                <td>Uso de cliente modificado o hacks</td>
+                            </tr>
+                            <tr>
+                                <td><code>Fly</code></td>
+                                <td>7d</td>
+                                <td>Volar sin permisos</td>
+                            </tr>
+                            <tr>
+                                <td><code>KillAura</code></td>
+                                <td>30d</td>
+                                <td>Atacar múltiples entidades simultáneamente</td>
+                            </tr>
+                            <tr>
+                                <td><code>Speed</code></td>
+                                <td>7d</td>
+                                <td>Velocidad de movimiento anormal</td>
+                            </tr>
+                            <tr>
+                                <td><code>Xray</code></td>
+                                <td>30d</td>
+                                <td>Ver a través de bloques</td>
+                            </tr>
+                            <tr>
+                                <td><code>AutoClicker</code></td>
+                                <td>14d</td>
+                                <td>Clicker automático</td>
+                            </tr>
+                            <tr>
+                                <td><code>BHop</code></td>
+                                <td>7d</td>
+                                <td>Bunny hop automático</td>
+                            </tr>
+                            <tr>
+                                <td><code>Reach</code></td>
+                                <td>14d</td>
+                                <td>Alcance extendido</td>
+                            </tr>
+                            <tr>
+                                <td><code>Evasion</code></td>
+                                <td>30d</td>
+                                <td>Evasión de ban con cuenta alternativa</td>
+                            </tr>
+                            <tr>
+                                <td><code>Toxicidad-Grave</code></td>
+                                <td>14d</td>
+                                <td>Comportamiento extremadamente tóxico</td>
+                            </tr>
+                            <tr>
+                                <td><code>Griefing-Masivo</code></td>
+                                <td>30d</td>
+                                <td>Destrucción masiva de construcciones</td>
+                            </tr>
+                            <tr>
+                                <td><code>Robo-Grave</code></td>
+                                <td>14d</td>
+                                <td>Robo de items valiosos</td>
+                            </tr>
+                            <tr>
+                                <td><code>Scam</code></td>
+                                <td>30d</td>
+                                <td>Estafas o fraudes a jugadores</td>
+                            </tr>
+                            <tr>
+                                <td><code>DDoS-Amenaza</code></td>
+                                <td>30d</td>
+                                <td>Amenazas de ataque DDoS</td>
+                            </tr>
+                            <tr>
+                                <td><code>Publicidad</code></td>
+                                <td>7d</td>
+                                <td>Publicitar otros servidores</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Templates: Mute -->
+            <section id="templates-mute" class="content-section">
+                <h2 class="section-title">Templates de Mute</h2>
+                <p class="section-description">14 plantillas para silenciar jugadores (máximo 30 días para Moderator)</p>
+                
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Template</th>
+                                <th>Duración</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>Spam</code></td>
+                                <td>3h</td>
+                                <td>Spam en el chat</td>
+                            </tr>
+                            <tr>
+                                <td><code>Spam-Severo</code></td>
+                                <td>12h</td>
+                                <td>Spam repetido o masivo</td>
+                            </tr>
+                            <tr>
+                                <td><code>Insultos</code></td>
+                                <td>6h</td>
+                                <td>Insultos a jugadores</td>
+                            </tr>
+                            <tr>
+                                <td><code>Insultos-Staff</code></td>
+                                <td>24h</td>
+                                <td>Insultos a miembros del staff</td>
+                            </tr>
+                            <tr>
+                                <td><code>Flood</code></td>
+                                <td>2h</td>
+                                <td>Mensajes repetitivos</td>
+                            </tr>
+                            <tr>
+                                <td><code>Mayusculas</code></td>
+                                <td>1h</td>
+                                <td>Abuso de mayúsculas (CAPS)</td>
+                            </tr>
+                            <tr>
+                                <td><code>Toxicidad</code></td>
+                                <td>12h</td>
+                                <td>Comportamiento tóxico general</td>
+                            </tr>
+                            <tr>
+                                <td><code>Lenguaje-Inapropiado</code></td>
+                                <td>6h</td>
+                                <td>Lenguaje ofensivo o vulgar</td>
+                            </tr>
+                            <tr>
+                                <td><code>Acoso</code></td>
+                                <td>24h</td>
+                                <td>Acoso a otros jugadores</td>
+                            </tr>
+                            <tr>
+                                <td><code>Discriminacion</code></td>
+                                <td>7d</td>
+                                <td>Comentarios discriminatorios</td>
+                            </tr>
+                            <tr>
+                                <td><code>Amenazas</code></td>
+                                <td>3d</td>
+                                <td>Amenazas a jugadores</td>
+                            </tr>
+                            <tr>
+                                <td><code>Spoiler</code></td>
+                                <td>12h</td>
+                                <td>Spoilers sin advertencia</td>
+                            </tr>
+                            <tr>
+                                <td><code>Mendigar</code></td>
+                                <td>3h</td>
+                                <td>Pedir items repetidamente</td>
+                            </tr>
+                            <tr>
+                                <td><code>Chat-Ingles</code></td>
+                                <td>30m</td>
+                                <td>Hablar en inglés en chat español</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Templates: Warn -->
+            <section id="templates-warn" class="content-section">
+                <h2 class="section-title">Templates de Warn</h2>
+                <p class="section-description">13 plantillas de advertencias (recordar: 3 warns = kick automático)</p>
+                
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Template</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>Comportamiento</code></td>
+                                <td>Comportamiento inapropiado general</td>
+                            </tr>
+                            <tr>
+                                <td><code>Spam-Leve</code></td>
+                                <td>Spam menor o accidental</td>
+                            </tr>
+                            <tr>
+                                <td><code>Caps-Leve</code></td>
+                                <td>Uso leve de mayúsculas</td>
+                            </tr>
+                            <tr>
+                                <td><code>Lenguaje</code></td>
+                                <td>Lenguaje inapropiado leve</td>
+                            </tr>
+                            <tr>
+                                <td><code>Flood-Leve</code></td>
+                                <td>Flood menor en chat</td>
+                            </tr>
+                            <tr>
+                                <td><code>Desobediencia</code></td>
+                                <td>No seguir instrucciones del staff</td>
+                            </tr>
+                            <tr>
+                                <td><code>PvP-Zona</code></td>
+                                <td>PvP en zona no autorizada</td>
+                            </tr>
+                            <tr>
+                                <td><code>Construccion-Inapropiada</code></td>
+                                <td>Construcciones ofensivas o inapropiadas</td>
+                            </tr>
+                            <tr>
+                                <td><code>Trolleo</code></td>
+                                <td>Molestar a otros jugadores</td>
+                            </tr>
+                            <tr>
+                                <td><code>AFK-Farm</code></td>
+                                <td>Uso de granja AFK prohibida</td>
+                            </tr>
+                            <tr>
+                                <td><code>Bug-Abuse</code></td>
+                                <td>Abuso de bugs del servidor</td>
+                            </tr>
+                            <tr>
+                                <td><code>Skin-Inapropiada</code></td>
+                                <td>Skin ofensiva o inapropiada</td>
+                            </tr>
+                            <tr>
+                                <td><code>Nickname-Inapropiado</code></td>
+                                <td>Nombre de usuario ofensivo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout callout-info">
+                    <div class="callout-title">Sistema de Escalamiento</div>
+                    <ul class="callout-list">
+                        <li><strong>3 warns activos</strong> → Kick automático del servidor</li>
+                        <li><strong>5 warns activos</strong> → Ban automático de 1 día</li>
+                        <li><strong>7 warns activos</strong> → Ban automático de 7 días</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Templates: Kick -->
+            <section id="templates-kick" class="content-section">
+                <h2 class="section-title">Templates de Kick</h2>
+                <p class="section-description">12 plantillas para expulsar jugadores del servidor</p>
+                
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Template</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>Spam-Rapido</code></td>
+                                <td>Spam rápido en chat</td>
+                            </tr>
+                            <tr>
+                                <td><code>Comportamiento-Molesto</code></td>
+                                <td>Molestar repetidamente a jugadores</td>
+                            </tr>
+                            <tr>
+                                <td><code>Desobediencia-Staff</code></td>
+                                <td>Ignorar órdenes del staff</td>
+                            </tr>
+                            <tr>
+                                <td><code>Lag-Intencional</code></td>
+                                <td>Causar lag intencionalmente</td>
+                            </tr>
+                            <tr>
+                                <td><code>AFK-Tiempo</code></td>
+                                <td>AFK por tiempo excesivo</td>
+                            </tr>
+                            <tr>
+                                <td><code>Trolleo-Moderado</code></td>
+                                <td>Trollear moderadamente</td>
+                            </tr>
+                            <tr>
+                                <td><code>Construccion-Lag</code></td>
+                                <td>Construcciones que causan lag</td>
+                            </tr>
+                            <tr>
+                                <td><code>Mobs-Excesivos</code></td>
+                                <td>Acumular mobs excesivamente</td>
+                            </tr>
+                            <tr>
+                                <td><code>Redstone-Lag</code></td>
+                                <td>Redstone que causa lag</td>
+                            </tr>
+                            <tr>
+                                <td><code>Evasion-Mute</code></td>
+                                <td>Evadir mute con comandos/signos</td>
+                            </tr>
+                            <tr>
+                                <td><code>Reconexion-Rapida</code></td>
+                                <td>Reconexiones rápidas repetidas</td>
+                            </tr>
+                            <tr>
+                                <td><code>Bug-Menor</code></td>
+                                <td>Abuso menor de bug</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Procedimiento Completo -->
+            <section id="procedimiento" class="content-section">
+                <h2 class="section-title">Procedimiento Completo</h2>
+                <p class="section-description">Pasos detallados para aplicar sanciones correctamente</p>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Detectar la Infracción</h4>
+                            <p>Observa el comportamiento del jugador. Asegúrate de que realmente está violando las reglas.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Revisar Historial</h4>
+                            <p>Usa <code>/history &lt;jugador&gt;</code> para ver sanciones anteriores.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Elegir Template Correcto</h4>
+                            <p>Selecciona la plantilla que mejor coincida con la infracción.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Aplicar Sanción</h4>
+                            <p>Ejecuta el comando correspondiente: <code>/warn</code>, <code>/kick</code>, <code>/mute</code> o <code>/ban</code></p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Webhook Automático</h4>
+                            <p>El sistema envía automáticamente un mensaje a <strong>#sanciones-evidencias</strong> en Discord.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Crear Hilo con Evidencias</h4>
+                            <p><strong>TÚ DEBES</strong> crear un hilo en el mensaje del webhook y subir capturas/videos como evidencia.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h4>Monitorear</h4>
+                            <p>Observa el comportamiento del jugador después de la sanción.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-danger">
+                    <div class="callout-title">Crítico: Evidencias Obligatorias</div>
+                    <p>Toda sanción SIN evidencias en el hilo puede ser revertida y puede resultar en consecuencias para ti. <strong>SIEMPRE sube capturas o videos.</strong></p>
+                </div>
+            </section>
+
+            <!-- Ejemplos Prácticos -->
+            <section id="ejemplos" class="content-section">
+                <h2 class="section-title">Ejemplos Prácticos</h2>
+                <p class="section-description">Casos reales y cómo manejarlos</p>
+                
+                <div class="example-grid">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-number">1</div>
+                            <h4>Jugador usa Fly</h4>
+                        </div>
+                        <div class="example-body">
+                            <p class="example-situation"><strong>Situación:</strong> Ves a "Hacker123" volando en survival.</p>
+                            <div class="example-steps">
+                                <p><strong>Acción:</strong></p>
+                                <ol>
+                                    <li><code>/history Hacker123</code> → Sin historial previo</li>
+                                    <li><code>/freeze Hacker123</code> → Lo congelas</li>
+                                    <li>Tomas captura/video del jugador volando</li>
+                                    <li><code>/ban Hacker123 Fly</code></li>
+                                    <li>Creas hilo en Discord y subes evidencia</li>
+                                </ol>
+                            </div>
+                            <div class="example-result">
+                                <strong>Resultado:</strong> Ban 7 días con evidencia registrada
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-number">2</div>
+                            <h4>Spam en Chat</h4>
+                        </div>
+                        <div class="example-body">
+                            <p class="example-situation"><strong>Situación:</strong> "SpammerXD" está spameando el chat.</p>
+                            <div class="example-steps">
+                                <p><strong>Acción:</strong></p>
+                                <ol>
+                                    <li><code>/history SpammerXD</code> → 1 warn anterior por Spam-Leve</li>
+                                    <li>Tomas captura del spam en chat</li>
+                                    <li><code>/mute SpammerXD Spam</code> → Mute 3 horas</li>
+                                    <li>Creas hilo y subes captura</li>
+                                </ol>
+                            </div>
+                            <div class="example-result">
+                                <strong>Resultado:</strong> Mute 3h (reincidente)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-number">3</div>
+                            <h4>Primera Infracción Leve</h4>
+                        </div>
+                        <div class="example-body">
+                            <p class="example-situation"><strong>Situación:</strong> "Newbie" usa mayúsculas en chat (primera vez).</p>
+                            <div class="example-steps">
+                                <p><strong>Acción:</strong></p>
+                                <ol>
+                                    <li><code>/history Newbie</code> → Sin historial</li>
+                                    <li><code>/warn Newbie Caps-Leve</code></li>
+                                    <li>Le explicas por mensaje privado las reglas</li>
+                                    <li>Tomas captura y subes a hilo</li>
+                                </ol>
+                            </div>
+                            <div class="example-result">
+                                <strong>Resultado:</strong> Advertencia educativa
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-number">4</div>
+                            <h4>Jugador con 2 Warns</h4>
+                        </div>
+                        <div class="example-body">
+                            <p class="example-situation"><strong>Situación:</strong> "Troll123" tiene 2 warns activos y hace flood.</p>
+                            <div class="example-steps">
+                                <p><strong>Acción:</strong></p>
+                                <ol>
+                                    <li><code>/history Troll123</code> → 2 warns activos</li>
+                                    <li><code>/warn Troll123 Flood-Leve</code></li>
+                                    <li><strong>Sistema automático:</strong> Kick (3 warns)</li>
+                                    <li>Subes captura del flood al hilo</li>
+                                </ol>
+                            </div>
+                            <div class="example-result">
+                                <strong>Resultado:</strong> Warn + kick automático
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-number">5</div>
+                            <h4>Insultos a Staff</h4>
+                        </div>
+                        <div class="example-body">
+                            <p class="example-situation"><strong>Situación:</strong> "Toxic99" insulta a un moderador.</p>
+                            <div class="example-steps">
+                                <p><strong>Acción:</strong></p>
+                                <ol>
+                                    <li><code>/history Toxic99</code> → Chequeas historial</li>
+                                    <li>Tomas captura de los insultos</li>
+                                    <li><code>/mute Toxic99 Insultos-Staff</code> → 24h</li>
+                                    <li>Reportas a admin en #staff-privado</li>
+                                    <li>Subes evidencia al hilo</li>
+                                </ol>
+                            </div>
+                            <div class="example-result">
+                                <strong>Resultado:</strong> Mute 24h + reporte a admins
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-number">6</div>
+                            <h4>Sospecha de Hacks</h4>
+                        </div>
+                        <div class="example-body">
+                            <p class="example-situation"><strong>Situación:</strong> "Suspicious" tiene movimientos extraños.</p>
+                            <div class="example-steps">
+                                <p><strong>Acción:</strong></p>
+                                <ol>
+                                    <li><code>/freeze Suspicious</code></li>
+                                    <li>Activas <code>/vanish</code> y lo observas</li>
+                                    <li>Grabas video de 30-60 segundos</li>
+                                    <li>Si confirmas: <code>/ban Suspicious [Template]</code></li>
+                                    <li>Si dudas: Reportas a Moderator/Admin</li>
+                                </ol>
+                            </div>
+                            <div class="example-result">
+                                <strong>Resultado:</strong> Evidencia + sanción o reporte
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-number">7</div>
+                            <h4>Multicuenta Evasión</h4>
+                        </div>
+                        <div class="example-body">
+                            <p class="example-situation"><strong>Situación:</strong> Jugador baneado regresa con alt.</p>
+                            <div class="example-steps">
+                                <p><strong>Acción:</strong></p>
+                                <ol>
+                                    <li><code>/dupeip AltAccount</code> → Detectas cuenta principal baneada</li>
+                                    <li>Tomas captura del resultado</li>
+                                    <li><code>/ban AltAccount Evasion</code> → 30 días</li>
+                                    <li>Reportas a admin (puede extender ban de cuenta principal)</li>
+                                </ol>
+                            </div>
+                            <div class="example-result">
+                                <strong>Resultado:</strong> Ban 30d + reporte a admins
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-number">8</div>
+                            <h4>Jugador Pide Perdón</h4>
+                        </div>
+                        <div class="example-body">
+                            <p class="example-situation"><strong>Situación:</strong> Aplicas sanción y jugador pide perdón inmediatamente.</p>
+                            <div class="example-steps">
+                                <p><strong>Acción:</strong></p>
+                                <ol>
+                                    <li><strong>NO REMUEVES</strong> la sanción</li>
+                                    <li>Le explicas que debe cumplir el castigo</li>
+                                    <li>Si crees que merece reducción, consultas con admin</li>
+                                    <li>Registras la situación en #staff-privado</li>
+                                </ol>
+                            </div>
+                            <div class="example-result">
+                                <strong>Resultado:</strong> Sanción se mantiene (no hay excepciones)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq" class="content-section">
+                <h2 class="section-title">FAQ - Preguntas Frecuentes</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            ¿Qué hago si un jugador me insulta después de sancionarlo?
+                        </div>
+                        <div class="faq-answer">
+                            Aplica template <code>Insultos-Staff</code> (mute 24h) y repórtalo a un admin. NO respondas a las provocaciones.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            ¿Puedo reducir una sanción si el jugador promete no hacerlo de nuevo?
+                        </div>
+                        <div class="faq-answer">
+                            <strong>NO.</strong> Solo los admins pueden modificar sanciones. Mantén la sanción aplicada y si tienes dudas, consulta con un superior.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            ¿Qué hago si no estoy seguro de qué template usar?
+                        </div>
+                        <div class="faq-answer">
+                            Pregunta en <code>#staff-privado</code> antes de aplicar la sanción. Es mejor preguntar que equivocarse.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            ¿Cuántas capturas debo subir como evidencia?
+                        </div>
+                        <div class="faq-answer">
+                            Mínimo 1-2 capturas claras. Para hacks, un video de 30-60 segundos es ideal. Mientras más evidencia, mejor.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            ¿Qué pasa si olvido subir evidencias?
+                        </div>
+                        <div class="faq-answer">
+                            La sanción puede ser revertida por un admin. Además, puede afectar tu posición en el staff. <strong>SIEMPRE sube evidencias.</strong>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            ¿Puedo sancionar a un amigo/conocido?
+                        </div>
+                        <div class="faq-answer">
+                            <strong>SÍ.</strong> Las reglas aplican para todos por igual. Si un amigo rompe las reglas, debe recibir la misma sanción que cualquier otro jugador.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            ¿Qué hago si veo a otro staff abusando?
+                        </div>
+                        <div class="faq-answer">
+                            Toma evidencias (capturas/video) y repórtalo inmediatamente a un admin vía mensaje privado. NO lo confrontes públicamente.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            ¿Cuándo debo usar /freeze?
+                        </div>
+                        <div class="faq-answer">
+                            Al investigar posibles hacks, al tomar evidencias de construcciones, o al hablar con un jugador que está moviendo mucho. NO abuses de este comando.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resumen por Rango -->
+            <section id="resumen" class="content-section">
+                <h2 class="section-title">Resumen por Rango</h2>
+                
+                <div class="summary-grid">
+                    <div class="summary-card helper">
+                        <div class="summary-header">
+                            <svg class="summary-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                            <h3>Helper</h3>
+                        </div>
+                        <div class="summary-body">
+                            <h4>Puedes usar:</h4>
+                            <ul>
+                                <li><code>/warn</code> - 13 templates</li>
+                                <li><code>/kick</code> - 12 templates</li>
+                                <li><code>/history</code>, <code>/checkban</code>, <code>/checkmute</code></li>
+                                <li><code>/tp</code>, <code>/freeze</code>, <code>/vanish</code></li>
+                                <li><code>/invsee</code>, <code>/enderchest</code></li>
+                            </ul>
+                            <h4>NO puedes:</h4>
+                            <ul>
+                                <li>❌ Banear jugadores</li>
+                                <li>❌ Mutear jugadores</li>
+                                <li>❌ Remover sanciones</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="summary-card moderator">
+                        <div class="summary-header">
+                            <svg class="summary-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                            </svg>
+                            <h3>Moderator</h3>
+                        </div>
+                        <div class="summary-body">
+                            <h4>Todo de Helper +</h4>
+                            <ul>
+                                <li><code>/ban</code> - 15 templates (máx 30d)</li>
+                                <li><code>/tempban</code> - Bans temporales</li>
+                                <li><code>/mute</code> - 14 templates (máx 30d)</li>
+                                <li><code>/tempmute</code> - Mutes temporales</li>
+                            </ul>
+                            <h4>Recuerda:</h4>
+                            <ul>
+                                <li>⚠️ Máximo 30 días de ban/mute</li>
+                                <li>⚠️ Consultar con admins antes de remover</li>
+                                <li>⚠️ Proporcionar razón detallada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recordatorios Críticos -->
+            <section id="recordatorios" class="content-section">
+                <h2 class="section-title">Recordatorios Críticos</h2>
+                
+                <div class="principles-grid">
+                    <div class="principle-card principle-primary">
+                        <div class="principle-number">1</div>
+                        <h4>Usa SOLO Templates</h4>
+                        <p>Nunca crees castigos personalizados. Solo usa las plantillas predefinidas del sistema.</p>
+                    </div>
+
+                    <div class="principle-card principle-warning">
+                        <div class="principle-number">2</div>
+                        <h4>Evidencias Obligatorias</h4>
+                        <p>Toda sanción DEBE tener evidencias en el hilo de Discord. Sin excepciones.</p>
+                    </div>
+
+                    <div class="principle-card principle-info">
+                        <div class="principle-number">3</div>
+                        <h4>Revisa el Historial</h4>
+                        <p>SIEMPRE usa <code>/history</code> antes de sancionar para ver el contexto completo.</p>
+                    </div>
+
+                    <div class="principle-card principle-danger">
+                        <div class="principle-number">4</div>
+                        <h4>No Abuses de tu Poder</h4>
+                        <p>Los comandos de staff son para moderar, no para ventajas personales o ayudar amigos.</p>
+                    </div>
+
+                    <div class="principle-card principle-success">
+                        <div class="principle-number">5</div>
+                        <h4>Consulta Cuando Dudes</h4>
+                        <p>Mejor preguntar en #staff-privado que cometer un error. No tengas miedo de pedir ayuda.</p>
+                    </div>
+                </div>
+
+                <div class="callout callout-info">
+                    <div class="callout-title">💡 Consejo Final</div>
+                    <p>Ser staff no se trata de tener poder, se trata de ayudar a mantener una comunidad sana y divertida para todos. Actúa siempre con profesionalismo y respeto.</p>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <h3>¡Gracias por mantener AtheOneDam seguro!</h3>
+                    <p>Tu trabajo hace que la comunidad sea un lugar mejor. Ante cualquier duda, consulta con los admins.</p>
+                    <div class="footer-meta">
+                        Documento Confidencial · Solo para Staff · Versión 2.1 · Octubre 2025
+                    </div>
+                </div>
+            </footer>
+
+        </main>
     </div>
-
-    <div class="content-section">
-
-        <h2>Principios Fundamentales</h2>
-        
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h4>Solo Templates</h4>
-                <p>No puedes crear castigos personalizados. Debes usar exclusivamente las plantillas predefinidas del sistema.</p>
-            </div>
-            <div class="feature-card">
-                <h4>Investiga Primero</h4>
-                <p>Siempre revisa el historial del jugador con <code>/history</code> antes de aplicar cualquier sanción.</p>
-            </div>
-            <div class="feature-card">
-                <h4>Evidencia Obligatoria</h4>
-                <p>Cada sanción debe tener evidencias en Discord (#sanciones-evidencias) con capturas o videos en un hilo.</p>
-            </div>
-        </div>
-
-        <div class="warning-box">
-            <h3 style="margin: 0 0 16px 0; color: #92400e; font-size: 1.25em;">Procedimiento de Evidencias</h3>
-            <ol style="font-size: 1em; line-height: 1.8; padding-left: 20px;">
-                <li>Aplicas la sanción en el servidor</li>
-                <li>El webhook envía mensaje automático a <strong>#sanciones-evidencias</strong></li>
-                <li><strong>TÚ DEBES crear un HILO</strong> en ese mensaje</li>
-                <li>Sube capturas/videos en el hilo como evidencia</li>
-                <li>El mensaje del webhook + el hilo quedan registrados permanentemente</li>
-            </ol>
-        </div>
-
-        <div class="page-break"></div>
-
-        <h2 id="comandos">Comandos Disponibles</h2>
-
-        <div class="warning-box">
-            <h3 style="margin: 0 0 12px 0; color: #92400e; font-size: 1.125em;">Sistema de Escalamiento Automático</h3>
-            <p style="margin: 0; font-size: 1em;">3 warns = Kick automático | 5 warns = Ban 1 día | 7 warns = Ban 7 días</p>
-        </div>
-
-        <div class="category-header" style="background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%); border-color: #3b82f6;">
-            <div class="category-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
-                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-                </svg>
-            </div>
-            <div class="category-content">
-                <div class="category-title" style="color: #1e40af;">Comandos Helper</div>
-                <div class="category-count">Warn y Kick únicamente</div>
-            </div>
-        </div>
-
-        <h3>Sanciones</h3>
-        <table>
-            <tr>
-                <th style="width: 200px;">Comando</th>
-                <th>Descripción</th>
-                <th style="width: 250px;">Ejemplo</th>
-            </tr>
-            <tr>
-                <td><code>/warn &lt;jugador&gt; &lt;template&gt;</code></td>
-                <td>Advertir a un jugador</td>
-                <td><code>/warn Player Comportamiento</code></td>
-            </tr>
-            <tr>
-                <td><code>/kick &lt;jugador&gt; &lt;template&gt;</code></td>
-                <td>Expulsar a un jugador</td>
-                <td><code>/kick Player Spam-Rapido</code></td>
-            </tr>
-        </table>
-
-        <h3>Consulta de Sanciones</h3>
-        <table>
-            <tr>
-                <th style="width: 200px;">Comando</th>
-                <th>Descripción</th>
-                <th style="width: 250px;">Ejemplo</th>
-            </tr>
-            <tr>
-                <td><code>/history &lt;jugador&gt;</code></td>
-                <td>Ver historial completo de sanciones</td>
-                <td><code>/history Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/checkban &lt;jugador&gt;</code></td>
-                <td>Verificar si está baneado</td>
-                <td><code>/checkban Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/checkmute &lt;jugador&gt;</code></td>
-                <td>Verificar si está silenciado</td>
-                <td><code>/checkmute Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/checkwarn &lt;jugador&gt;</code></td>
-                <td>Ver advertencias activas</td>
-                <td><code>/checkwarn Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/warnings &lt;jugador&gt;</code></td>
-                <td>Lista de advertencias</td>
-                <td><code>/warnings Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/dupeip &lt;jugador&gt;</code></td>
-                <td>Ver multicuentas (alts)</td>
-                <td><code>/dupeip Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/iphistory &lt;jugador&gt;</code></td>
-                <td>Ver historial de IPs</td>
-                <td><code>/iphistory Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/geoip &lt;jugador|IP&gt;</code></td>
-                <td>Ver ubicación geográfica</td>
-                <td><code>/geoip Player</code></td>
-            </tr>
-        </table>
-
-        <h3>Utilidades</h3>
-        <table>
-            <tr>
-                <th style="width: 200px;">Comando</th>
-                <th>Descripción</th>
-                <th style="width: 250px;">Ejemplo</th>
-            </tr>
-            <tr>
-                <td><code>/tp &lt;jugador&gt;</code></td>
-                <td>Teleportarte a un jugador</td>
-                <td><code>/tp Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/freeze &lt;jugador&gt;</code></td>
-                <td>Congelar/descongelar jugador</td>
-                <td><code>/freeze Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/invsee &lt;jugador&gt;</code></td>
-                <td>Ver inventario de jugador</td>
-                <td><code>/invsee Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/enderchest &lt;jugador&gt;</code></td>
-                <td>Ver ender chest de jugador</td>
-                <td><code>/enderchest Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/vanish</code></td>
-                <td>Activar/desactivar modo invisible</td>
-                <td><code>/vanish</code></td>
-            </tr>
-            <tr>
-                <td><code>/socialspy</code></td>
-                <td>Ver mensajes privados de jugadores</td>
-                <td><code>/socialspy</code></td>
-            </tr>
-            <tr>
-                <td><code>/staffchat &lt;mensaje&gt;</code></td>
-                <td>Enviar mensaje al chat de staff</td>
-                <td><code>/sc Ayuda con Player</code></td>
-            </tr>
-        </table>
-
-        <div class="page-break"></div>
-
-        <div class="category-header" style="background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%); border-color: #10b981;">
-            <div class="category-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
-                </svg>
-            </div>
-            <div class="category-content">
-                <div class="category-title" style="color: #065f46;">Comandos Moderator</div>
-                <div class="category-count">Todos los comandos de Helper + Ban y Mute</div>
-            </div>
-        </div>
-
-        <h3>Sanciones Adicionales</h3>
-        <table>
-            <tr>
-                <th style="width: 200px;">Comando</th>
-                <th>Descripción</th>
-                <th style="width: 250px;">Ejemplo</th>
-            </tr>
-            <tr>
-                <td><code>/ban &lt;jugador&gt; &lt;template&gt;</code></td>
-                <td>Banear jugador (máx 1 mes)</td>
-                <td><code>/ban Player Hacks</code></td>
-            </tr>
-            <tr>
-                <td><code>/tempban &lt;jugador&gt; &lt;template&gt;</code></td>
-                <td>Ban temporal (usa templates)</td>
-                <td><code>/tempban Player Fly</code></td>
-            </tr>
-            <tr>
-                <td><code>/mute &lt;jugador&gt; &lt;template&gt;</code></td>
-                <td>Silenciar jugador (máx 1 mes)</td>
-                <td><code>/mute Player Spam</code></td>
-            </tr>
-            <tr>
-                <td><code>/tempmute &lt;jugador&gt; &lt;template&gt;</code></td>
-                <td>Mute temporal (usa templates)</td>
-                <td><code>/tempmute Player Insultos</code></td>
-            </tr>
-        </table>
-
-        <h3>Remover Sanciones</h3>
-        <table>
-            <tr>
-                <th style="width: 200px;">Comando</th>
-                <th>Descripción</th>
-                <th style="width: 250px;">Ejemplo</th>
-            </tr>
-            <tr>
-                <td><code>/unban &lt;jugador&gt; &lt;razón&gt;</code></td>
-                <td>Remover baneo (razón obligatoria)</td>
-                <td><code>/unban Player Apelación aceptada</code></td>
-            </tr>
-            <tr>
-                <td><code>/unmute &lt;jugador&gt; &lt;razón&gt;</code></td>
-                <td>Remover silencio (razón obligatoria)</td>
-                <td><code>/unmute Player Error de sistema</code></td>
-            </tr>
-            <tr>
-                <td><code>/unwarn &lt;jugador&gt; &lt;razón&gt;</code></td>
-                <td>Remover advertencia (razón obligatoria)</td>
-                <td><code>/unwarn Player Warn equivocada</code></td>
-            </tr>
-        </table>
-
-        <div class="danger-box">
-            <h3 style="margin: 0 0 12px 0; color: #991b1b; font-size: 1.125em;">Importante</h3>
-            <p style="margin: 0;">Consulta con admins antes de remover castigos. Siempre proporciona una razón detallada.</p>
-        </div>
-
-        <h3>Consulta Adicional</h3>
-        <table>
-            <tr>
-                <th style="width: 200px;">Comando</th>
-                <th>Descripción</th>
-                <th style="width: 250px;">Ejemplo</th>
-            </tr>
-            <tr>
-                <td><code>/banlist</code></td>
-                <td>Ver lista de jugadores baneados</td>
-                <td><code>/banlist</code></td>
-            </tr>
-            <tr>
-                <td><code>/namehistory &lt;jugador&gt;</code></td>
-                <td>Ver historial de nombres</td>
-                <td><code>/namehistory Player</code></td>
-            </tr>
-        </table>
-
-        <h3>Utilidades Adicionales</h3>
-        <table>
-            <tr>
-                <th style="width: 200px;">Comando</th>
-                <th>Descripción</th>
-                <th style="width: 250px;">Ejemplo</th>
-            </tr>
-            <tr>
-                <td><code>/tphere &lt;jugador&gt;</code></td>
-                <td>Teleportar jugador hacia ti</td>
-                <td><code>/tphere Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/clearinventory &lt;jugador&gt;</code></td>
-                <td>Limpiar inventario de jugador</td>
-                <td><code>/clearinventory Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/clearenderchest &lt;jugador&gt;</code></td>
-                <td>Limpiar ender chest de jugador</td>
-                <td><code>/clearenderchest Player</code></td>
-            </tr>
-            <tr>
-                <td><code>/gms</code></td>
-                <td>Cambiar a modo survival</td>
-                <td><code>/gms</code></td>
-            </tr>
-            <tr>
-                <td><code>/gmsp</code></td>
-                <td>Cambiar a modo espectador (para investigar invisible)</td>
-                <td><code>/gmsp</code></td>
-            </tr>
-        </table>
-
-        <div class="page-break"></div>
-
-        <h2 id="templates">Templates Disponibles</h2>
-
-        <div class="info-box">
-            <strong>¿Cómo funcionan las escaleras?</strong><br>
-            Primera ofensa → Castigo leve | Segunda ofensa → Castigo moderado | Tercera+ ofensa → Castigo severo<br>
-            El sistema detecta automáticamente el historial y aplica la duración correcta.
-        </div>
-
-        <div class="warning-box">
-            <h3 style="margin: 0 0 12px 0; color: #92400e; font-size: 1.125em;">Límites por Rango</h3>
-            <p style="margin: 0 0 8px 0;"><span class="badge badge-helper">Helper</span> Máximo 15 días ban | 7 días mute</p>
-            <p style="margin: 0 0 8px 0;"><span class="badge badge-moderator">Moderator</span> Máximo 1 mes ban/mute</p>
-            <p style="margin: 0; font-size: 0.9375em; color: #78350f;">Nota: Templates con castigos mayores solo aplicarán hasta tu límite</p>
-        </div>
-
-        <div style="page-break-inside: avoid;">
-            <div class="category-header category-ban">
-                <div class="category-icon">
-                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
-                    </svg>
-                </div>
-                <div class="category-content">
-                    <div class="category-title">Ban Templates</div>
-                    <div class="category-count">15 plantillas disponibles</div>
-                </div>
-            </div>
-        </div>
-        
-        <table style="font-size: 0.95em; page-break-before: avoid;">
-            <tr>
-                <th style="width: 150px;">Template</th>
-                <th>Razón</th>
-                <th>Escalera</th>
-                <th style="width: 80px;">Helper</th>
-                <th style="width: 80px;">Mod</th>
-            </tr>
-            <tr>
-                <td><code>Hacks</code></td>
-                <td>Uso de hacks generales</td>
-                <td>7d → 30d → 90d → Perm</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>KillAura</code></td>
-                <td>KillAura/ForceField</td>
-                <td>14d → 60d → Perm</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>Fly</code></td>
-                <td>Vuelo no autorizado</td>
-                <td>10d → 45d → Perm</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>XRay</code></td>
-                <td>Rayos X/texturas</td>
-                <td>21d → 60d → Perm</td>
-                <td><span style="color: #f59e0b; font-weight: 600;">Limitado</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>AutoClicker</code></td>
-                <td>AutoClicker/Macros</td>
-                <td>7d → 30d → 90d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #f8fafc;">
-                <td><code>Griefing</code></td>
-                <td>Destrucción construcciones</td>
-                <td>3d → 14d → 60d → Perm</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #f8fafc;">
-                <td><code>Toxicidad</code></td>
-                <td>Comportamiento tóxico</td>
-                <td>3d → 14d → 60d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #f8fafc;">
-                <td><code>Acoso</code></td>
-                <td>Acoso a jugadores</td>
-                <td>7d → 30d → 90d → Perm</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #fffbeb;">
-                <td><code>Duping</code></td>
-                <td>Duplicación items</td>
-                <td>60d → Perm</td>
-                <td><span style="color: #f59e0b; font-weight: 600;">Limitado</span></td>
-                <td><span style="color: #f59e0b; font-weight: 600;">Limitado</span></td>
-            </tr>
-            <tr style="background: #fffbeb;">
-                <td><code>Scam</code></td>
-                <td>Estafas</td>
-                <td>14d → 60d → Perm</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #fef2f2;">
-                <td><code>AltAccount</code></td>
-                <td>Cuenta alt baneado</td>
-                <td>Permanente</td>
-                <td><span style="color: #dc2626; font-weight: 600;">No</span></td>
-                <td><span style="color: #dc2626; font-weight: 600;">No</span></td>
-            </tr>
-            <tr style="background: #fef2f2;">
-                <td><code>BanEvasion</code></td>
-                <td>Evadiendo baneo</td>
-                <td>Permanente</td>
-                <td><span style="color: #dc2626; font-weight: 600;">No</span></td>
-                <td><span style="color: #dc2626; font-weight: 600;">No</span></td>
-            </tr>
-            <tr style="background: #fef2f2;">
-                <td><code>Advertising</code></td>
-                <td>Spam otros servidores</td>
-                <td>7d → 30d → Perm</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #fef2f2;">
-                <td><code>Inapropiado</code></td>
-                <td>Contenido inapropiado</td>
-                <td>14d → Perm</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #fef2f2;">
-                <td><code>Staff-Abuse</code></td>
-                <td>Abuso permisos staff</td>
-                <td>Permanente</td>
-                <td><span style="color: #dc2626; font-weight: 600;">No</span></td>
-                <td><span style="color: #dc2626; font-weight: 600;">No</span></td>
-            </tr>
-        </table>
-
-        <div class="page-break"></div>
-
-        <div style="page-break-inside: avoid;">
-            <div class="category-header category-mute">
-                <div class="category-icon">
-                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
-                    </svg>
-                </div>
-                <div class="category-content">
-                    <div class="category-title">Mute Templates</div>
-                    <div class="category-count">14 plantillas disponibles</div>
-                </div>
-            </div>
-        </div>
-        
-        <table style="font-size: 0.95em; page-break-before: avoid;">
-            <tr>
-                <th style="width: 150px;">Template</th>
-                <th>Razón</th>
-                <th>Escalera</th>
-                <th style="width: 80px;">Helper</th>
-                <th style="width: 80px;">Mod</th>
-            </tr>
-            <tr>
-                <td><code>Spam</code></td>
-                <td>Spam/flood chat</td>
-                <td>1h → 12h → 2d → 7d → 30d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>CapsSpam</code></td>
-                <td>Abuso MAYÚSCULAS</td>
-                <td>30m → 12h → 3d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>Insultos</code></td>
-                <td>Insultos/ofensas</td>
-                <td>6h → 2d → 7d → 30d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #fef2f2;">
-                <td><code>Racismo</code></td>
-                <td>Comentarios racistas</td>
-                <td>30d → Perm <strong>+ Ban 30d</strong></td>
-                <td><span style="color: #f59e0b; font-weight: 600;">Limitado</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #fef2f2;">
-                <td><code>Homofobia</code></td>
-                <td>Comentarios homofóbicos</td>
-                <td>30d → Perm <strong>+ Ban 30d</strong></td>
-                <td><span style="color: #f59e0b; font-weight: 600;">Limitado</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>Toxicidad-Chat</code></td>
-                <td>Actitud tóxica</td>
-                <td>12h → 2d → 7d → 30d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>Advertising-Chat</code></td>
-                <td>Publicidad en chat</td>
-                <td>3d → 7d → 14d → Perm</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>MentionSpam</code></td>
-                <td>Spam menciones</td>
-                <td>6h → 2d → 7d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>Acoso-Chat</code></td>
-                <td>Acoso por chat</td>
-                <td>2d → 7d → 30d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr style="background: #fef2f2;">
-                <td><code>Doxxing</code></td>
-                <td>Compartir info personal</td>
-                <td>Permanente</td>
-                <td><span style="color: #dc2626; font-weight: 600;">No</span></td>
-                <td><span style="color: #dc2626; font-weight: 600;">No</span></td>
-            </tr>
-            <tr>
-                <td><code>Spoilers</code></td>
-                <td>Spoilers sin aviso</td>
-                <td>12h → 3d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>CommandSpam</code></td>
-                <td>Spam comandos</td>
-                <td>3h → 1d → 7d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-            <tr>
-                <td><code>InapropriadoChat</code></td>
-                <td>Contenido inapropiado</td>
-                <td>1d → 7d → 30d</td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-                <td><span style="color: #10b981; font-weight: 600;">Sí</span></td>
-            </tr>
-        </table>
-
-        <div style="page-break-inside: avoid;">
-            <div class="category-header category-warn">
-                <div class="category-icon">
-                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
-                    </svg>
-                </div>
-                <div class="category-content">
-                    <div class="category-title">Warn Templates</div>
-                    <div class="category-count">13 plantillas disponibles</div>
-                </div>
-            </div>
-        </div>
-        
-        <table style="font-size: 0.95em; page-break-before: avoid;">
-            <tr>
-                <th>Template</th>
-                <th>Razón</th>
-                <th>Todos los rangos</th>
-            </tr>
-            <tr><td><code>Comportamiento</code></td><td>Mal comportamiento general</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>Reglas</code></td><td>Incumplir reglas</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>ConstruccionInapropiada</code></td><td>Construcción inapropiada</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>ConstruccionZonaProhibida</code></td><td>Construir zona prohibida</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>LenguajeInapropiado</code></td><td>Lenguaje inapropiado leve</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>MayusculasExcesivas</code></td><td>Abuso MAYÚSCULAS</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>PublicidadLeve</code></td><td>Intento publicidad</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>AntiAFK</code></td><td>Métodos anti-AFK</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>AbusoBugs</code></td><td>Abusar bugs</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>TrampasLeves</code></td><td>Comportamiento sospechoso</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>PvPZonaProhibida</code></td><td>PvP zona prohibida</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>TeamKilling</code></td><td>Matar compañeros</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>PreciosAbusivos</code></td><td>Precios muy altos</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>SospechaMC</code></td><td>Sospecha multicuenta</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-        </table>
-
-        <div style="page-break-inside: avoid;">
-            <div class="category-header category-kick">
-                <div class="category-icon">
-                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                    </svg>
-                </div>
-                <div class="category-content">
-                    <div class="category-title">Kick Templates</div>
-                    <div class="category-count">12 plantillas disponibles</div>
-                </div>
-            </div>
-        </div>
-        
-        <table style="font-size: 0.95em; page-break-before: avoid;">
-            <tr>
-                <th>Template</th>
-                <th>Razón</th>
-                <th>Todos los rangos</th>
-            </tr>
-            <tr><td><code>Lag</code></td><td>Conexión inestable</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>Spam-Rapido</code></td><td>Spam excesivo</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>ComportamientoLeve</code></td><td>Mal comportamiento leve</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>Insultos-Leve</code></td><td>Insultos leves</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>Mayusculas</code></td><td>Abuso MAYÚSCULAS</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>UltimaAdvertencia</code></td><td><strong>Última advertencia antes ban</strong></td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>AFK</code></td><td>AFK tiempo prolongado</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>Flood</code></td><td>Flood chat</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>ComandosExcesivos</code></td><td>Spam comandos</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>ClientModificado</code></td><td>Cliente modificado</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-            <tr><td><code>Reconexion</code></td><td>Reconexión forzada</td><td><span style="color: #10b981; font-weight: 600;">Sí</span></td></tr>
-        </table>
-
-
-
-        <div class="page-break"></div>
-
-        <h2>Procedimiento Completo</h2>
-
-        <div class="success-box">
-            <h3 style="margin: 0 0 16px 0; color: #065f46; font-size: 1.25em;">Pasos a Seguir</h3>
-            <ol style="font-size: 1em; line-height: 1.8; padding-left: 20px;">
-                <li><strong>Investiga:</strong> <code>/history Jugador</code> + <code>/dupeip Jugador</code></li>
-                <li><strong>Toma evidencias:</strong> Captura de pantalla o video</li>
-                <li><strong>Aplica sanción:</strong> <code>/ban Jugador Template Razón</code></li>
-                <li><strong>Ve a Discord #sanciones-evidencias</strong></li>
-                <li><strong>Crea HILO en el mensaje del webhook</strong></li>
-                <li><strong>Sube evidencias en el hilo</strong></li>
-            </ol>
-        </div>
-
-        <div class="danger-box">
-            <h3 style="margin: 0 0 16px 0; color: #991b1b; font-size: 1.25em;">No Hacer</h3>
-            <ul style="font-size: 1em; line-height: 1.8; padding-left: 20px; list-style: none;">
-                <li style="margin-bottom: 8px;">• NO sancionar sin evidencias</li>
-                <li style="margin-bottom: 8px;">• NO usar templates incorrectos</li>
-                <li style="margin-bottom: 8px;">• NO abusar del poder</li>
-                <li style="margin-bottom: 8px;">• NO olvidar subir evidencias a Discord</li>
-                <li style="margin-bottom: 8px;">• NO remover castigos sin consultar a admins</li>
-            </ul>
-        </div>
-
-        <div class="page-break"></div>
-
-        <h2>Ejemplos Prácticos</h2>
-
-        <h3>Ejemplo 1: Helper - Jugador haciendo Spam</h3>
-        <div class="info-box">
-            <strong>Situación:</strong> Jugador está spammeando en el chat<br><br>
-            <strong>Pasos:</strong>
-            <ol style="line-height: 1.8;">
-                <li>Verifica historial: <code>/history SpammerPlayer</code></li>
-                <li>Si es primera vez, advierte: <code>/warn SpammerPlayer Spam Por favor no hagas spam</code></li>
-                <li>Si continúa, congela: <code>/freeze SpammerPlayer</code></li>
-                <li>Habla con él para que entienda la regla</li>
-                <li>Si persiste: <code>/kick SpammerPlayer Spam-Rapido</code></li>
-                <li><strong>Reporta a Moderator</strong> para que aplique mute si es necesario</li>
-            </ol>
-            <p style="margin-top: 15px;"><strong>Nota:</strong> Helper NO puede mutear, solo warn/kick. Para mutes, contactar a Moderator.</p>
-        </div>
-
-        <h3>Ejemplo 2: Moderator - Jugador haciendo Spam (continuación)</h3>
-        <div class="info-box">
-            <strong>Situación:</strong> Helper reporta spam persistente<br><br>
-            <strong>Pasos:</strong>
-            <ol style="line-height: 1.8;">
-                <li>Revisa el reporte del Helper</li>
-                <li>Verifica historial: <code>/history SpammerPlayer</code></li>
-                <li>Ve evidencias en Discord #sanciones-evidencias</li>
-                <li>Aplica mute: <code>/mute SpammerPlayer Spam Spam persistente después de warn y kick</code></li>
-                <li>Crea hilo en Discord con las evidencias</li>
-            </ol>
-            <p style="margin-top: 15px;">🔄 <strong>Sistema aplica escalera:</strong> Primera ofensa = 1h mute</p>
-        </div>
-
-        <h3>Ejemplo 3: Helper - Sospecha de Fly Hacks</h3>
-        <div class="info-box">
-            <strong>Situación:</strong> Observas jugador volando sospechosamente<br><br>
-            <strong>Pasos:</strong>
-            <ol style="line-height: 1.8;">
-                <li>Activa vanish: <code>/vanish</code></li>
-                <li>Teleportate: <code>/tp SuspectPlayer</code></li>
-                <li>Observa su comportamiento</li>
-                <li>Congela si confirmas: <code>/freeze SuspectPlayer</code></li>
-                <li>Toma video/capturas como evidencia</li>
-                <li><strong>Contacta a Moderator inmediatamente</strong></li>
-                <li>Si es obvio y Helper tiene certeza: <code>/warn SuspectPlayer TrampasLeves</code></li>
-            </ol>
-            <p style="margin-top: 15px;">⚠️ <strong>Helper NO puede banear</strong>. Para bans por hacks, debe contactar Moderator/Admin.</p>
-        </div>
-
-        <h3>Ejemplo 4: Moderator - Confirmar y Banear Hacker</h3>
-        <div class="info-box">
-            <strong>Situación:</strong> Helper reporta hacker con evidencias<br><br>
-            <strong>Pasos:</strong>
-            <ol style="line-height: 1.8;">
-                <li>Revisa evidencias del Helper (video/capturas)</li>
-                <li>Verifica historial: <code>/history HackerPlayer</code></li>
-                <li>Revisa multicuentas: <code>/dupeip HackerPlayer</code></li>
-                <li>Si hay alts, anota las cuentas</li>
-                <li>Aplica ban: <code>/ban HackerPlayer Fly Fly hacks confirmado con video</code></li>
-                <li>Si tiene alts: <code>/ban AltAccount AltAccount</code></li>
-                <li>Sube evidencias a Discord en el hilo del webhook</li>
-            </ol>
-            <p style="margin-top: 15px;">🔄 <strong>Escalera Fly:</strong> 1ra = 10d | 2da = 45d | 3ra = Permanente</p>
-        </div>
-
-        <h3>Ejemplo 5: Helper - Investigar Multicuentas</h3>
-        <div class="info-box">
-            <strong>Situación:</strong> Sospechas de multicuentas<br><br>
-            <strong>Pasos:</strong>
-            <ol style="line-height: 1.8;">
-                <li>Verifica dupeip: <code>/dupeip SuspectPlayer</code></li>
-                <li>Revisa historial de cada cuenta: <code>/history Account1</code>, <code>/history Account2</code></li>
-                <li>Verifica ubicación: <code>/geoip SuspectPlayer</code></li>
-                <li>Revisa IPs: <code>/iphistory SuspectPlayer</code></li>
-                <li>Documenta todo (capturas de /dupeip y /history)</li>
-                <li><strong>Reporta a Moderator con evidencias</strong></li>
-            </ol>
-            <p style="margin-top: 15px;">📝 <strong>Helper investiga</strong>, Moderator/Admin decide el castigo.</p>
-        </div>
-
-        <h3>Ejemplo 6: Moderator - Griefing con Evidencia</h3>
-        <div class="info-box">
-            <strong>Situación:</strong> Jugador reporta griefing con evidencia<br><br>
-            <strong>Pasos:</strong>
-            <ol style="line-height: 1.8;">
-                <li>Teleportate al lugar: <code>/tp VictimaPlayer</code></li>
-                <li>Verifica la destrucción (usa CoreProtect si disponible)</li>
-                <li>Revisa inventario del griefer: <code>/invsee GrieferPlayer</code></li>
-                <li>Verifica historial: <code>/history GrieferPlayer</code></li>
-                <li>Toma capturas de la evidencia</li>
-                <li>Aplica ban: <code>/ban GrieferPlayer Griefing Destruyó construcción de VictimaPlayer</code></li>
-                <li>Sube evidencias a Discord (capturas + logs)</li>
-            </ol>
-            <p style="margin-top: 15px;">🔄 <strong>Escalera Griefing:</strong> 1ra = 3d | 2da = 14d | 3ra = 60d | 4ta = Permanente</p>
-        </div>
-
-        <h3>Ejemplo 7: Moderator - Remover Castigo por Error</h3>
-        <div class="danger-box">
-            <strong>Situación:</strong> Te equivocaste de template o jugador<br><br>
-            <strong>Pasos:</strong>
-            <ol style="line-height: 1.8;">
-                <li>Verifica el castigo: <code>/history PlayerIncorrecto</code></li>
-                <li><strong>Contacta a Admin inmediatamente</strong></li>
-                <li>Explica el error detalladamente</li>
-                <li>Si Admin autoriza, remueve: <code>/unban PlayerIncorrecto Error: template incorrecto, debía ser warn</code></li>
-                <li>Documenta el error en Discord staff</li>
-                <li>Discúlpate con el jugador afectado</li>
-                <li>Aplica el castigo correcto si corresponde</li>
-            </ol>
-            <p style="margin-top: 15px;">⚠️ <strong>SIEMPRE consulta con Admin</strong> antes de remover castigos.</p>
-        </div>
-
-        <h3>Ejemplo 8: Helper - Usar Freeze para Investigar</h3>
-        <div class="success-box">
-            <strong>Situación:</strong> Necesitas hablar con un jugador sobre su comportamiento<br><br>
-            <strong>Pasos:</strong>
-            <ol style="line-height: 1.8;">
-                <li>Activa vanish: <code>/vanish</code></li>
-                <li>Teleportate: <code>/tp PlayerTarget</code></li>
-                <li>Congela: <code>/freeze PlayerTarget</code></li>
-                <li>Envíale mensaje privado: <code>/msg PlayerTarget Hola, necesito hablar contigo sobre...</code></li>
-                <li>Explica el problema con calma</li>
-                <li>Si coopera y entiende: <code>/freeze PlayerTarget</code> (descongela)</li>
-                <li>Si no coopera: aplica warn/kick según corresponda</li>
-            </ol>
-            <p style="margin-top: 15px;">💬 <strong>Freeze es útil</strong> para evitar que escapen mientras investigas.</p>
-        </div>
-
-        <div class="page-break"></div>
-
-        <h2>❓ FAQ Rápido</h2>
-
-        <table>
-            <tr>
-                <th>Pregunta</th>
-                <th>Respuesta</th>
-            </tr>
-            <tr>
-                <td>¿Por qué solo templates?</td>
-                <td>Para consistencia y evitar abusos. El sistema aplica escaleras automáticas.</td>
-            </tr>
-            <tr>
-                <td>¿Me equivoqué de template?</td>
-                <td>Contacta a un admin. Ellos pueden modificar el castigo.</td>
-            </tr>
-            <tr>
-                <td>¿Olvidé subir evidencia?</td>
-                <td>Ve a #sanciones-evidencias, busca el webhook y crea el hilo ahora.</td>
-            </tr>
-            <tr>
-                <td>¿No estoy seguro si banear?</td>
-                <td><strong>NO BANEES.</strong> Consulta con admins primero.</td>
-            </tr>
-            <tr>
-                <td>¿Puedo remover castigos? (Mod)</td>
-                <td>Sí, pero SOLO con autorización de Admin. Siempre proporciona razón.</td>
-            </tr>
-            <tr>
-                <td>¿Helper puede banear/mutear?</td>
-                <td><strong>NO.</strong> Helper solo puede /warn y /kick. Para ban/mute, contactar Moderator.</td>
-            </tr>
-            <tr>
-                <td>¿Jugador me insulta?</td>
-                <td>Mantén calma. Captura, aplica castigo correspondiente, reporta.</td>
-            </tr>
-            <tr>
-                <td>¿Qué hago si encuentro hacker?</td>
-                <td><strong>Helper:</strong> Toma evidencias, congela, reporta a Mod. <strong>Mod:</strong> Verifica evidencias y banea.</td>
-            </tr>
-        </table>
-
-        <div class="page-break"></div>
-
-        <h2>Resumen Final por Rango</h2>
-
-        <div class="category-header" style="background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%); border-color: #3b82f6;">
-            <div class="category-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
-                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-                </svg>
-            </div>
-            <div class="category-content">
-                <div class="category-title" style="color: #1e40af;">Resumen Helper</div>
-                <div class="category-count">Warn y Kick - Sin permisos de Ban/Mute</div>
-            </div>
-        </div>
-        <div class="info-box">
-            <table style="margin: 0;">
-                <tr>
-                    <th style="width: 30%;">Categoría</th>
-                    <th>Puede hacer</th>
-                </tr>
-                <tr>
-                    <td><strong>Sanciones</strong></td>
-                    <td>Warn | Kick | <span style="color: #dc2626;">No Ban</span> | <span style="color: #dc2626;">No Mute</span></td>
-                </tr>
-                <tr>
-                    <td><strong>Consultas</strong></td>
-                    <td>History | CheckBan/Mute/Warn | DupeIP | IPHistory | GeoIP</td>
-                </tr>
-                <tr>
-                    <td><strong>Teleport</strong></td>
-                    <td>TP a jugadores | <span style="color: #dc2626;">No TPhere</span> (traer jugadores)</td>
-                </tr>
-                <tr>
-                    <td><strong>Utilidades</strong></td>
-                    <td>Freeze | InvSee | EnderChest | Vanish | SocialSpy | StaffChat</td>
-                </tr>
-                <tr>
-                    <td><strong>Remover Castigos</strong></td>
-                    <td><span style="color: #dc2626;">No puede remover ningún castigo</span></td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="category-header" style="background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%); border-color: #10b981; margin-top: 64px;">
-            <div class="category-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
-                </svg>
-            </div>
-            <div class="category-content">
-                <div class="category-title" style="color: #065f46;">Resumen Moderator</div>
-                <div class="category-count">Todos los permisos de Helper + Ban y Mute hasta 1 mes</div>
-            </div>
-        </div>
-        <div class="success-box">
-            <table style="margin: 0;">
-                <tr>
-                    <th style="width: 30%;">Categoría</th>
-                    <th>Puede hacer</th>
-                </tr>
-                <tr>
-                    <td><strong>Sanciones</strong></td>
-                    <td>Todo de Helper + <strong>Ban</strong> (1 mes máx) | <strong>Mute</strong> (1 mes máx)</td>
-                </tr>
-                <tr>
-                    <td><strong>Consultas</strong></td>
-                    <td>Todo de Helper + <strong>BanList</strong> | <strong>NameHistory</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>Teleport</strong></td>
-                    <td>Todo de Helper + <strong>TPhere</strong> (traer jugadores)</td>
-                </tr>
-                <tr>
-                    <td><strong>Utilidades</strong></td>
-                    <td>Todo de Helper + <strong>ClearInventory</strong> | <strong>ClearEnderChest</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>Remover Castigos</strong></td>
-                    <td><strong>Unban</strong> | <strong>Unmute</strong> | <strong>Unwarn</strong> <span style="color: #92400e;">(con autorización Admin)</span></td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="page-break"></div>
-
-        <h2>Principios Fundamentales del Staff</h2>
-
-        <div class="feature-grid" style="margin: 40px 0;">
-            <div class="feature-card">
-                <h4>Investiga Primero</h4>
-                <p>Usa <code>/history</code> y <code>/dupeip</code> antes de aplicar cualquier sanción.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h4>Template Correcto</h4>
-                <p>Usa siempre el template apropiado. El sistema aplicará la escalera automáticamente.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h4>Evidencias Obligatorias</h4>
-                <p>Screenshots o videos son obligatorios para cada sanción. Sin excepciones.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h4>Hilo en Discord</h4>
-                <p>Crea un hilo en el mensaje del webhook en <strong>#sanciones-evidencias</strong>.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h4>Documentación</h4>
-                <p>Sube todas las evidencias al hilo para registro permanente del caso.</p>
-            </div>
-        </div>
-
-        <div class="danger-box" style="margin: 48px 0;">
-            <h3 style="margin: 0 0 20px 0; color: #991b1b; font-size: 1.25em;">Recordatorios Críticos</h3>
-            
-            <div style="display: grid; gap: 16px;">
-                <div style="padding: 16px; background: white; border-left: 3px solid #3b82f6; border-radius: 8px;">
-                    <strong style="color: #1e40af;">Helper:</strong>
-                    <span style="color: #64748b;">Solo Warn y Kick. NO pueden banear ni mutear.</span>
-                </div>
-                
-                <div style="padding: 16px; background: white; border-left: 3px solid #10b981; border-radius: 8px;">
-                    <strong style="color: #065f46;">Moderator:</strong>
-                    <span style="color: #64748b;">Ban/Mute máximo 1 mes. Consultar admin para períodos mayores.</span>
-                </div>
-                
-                <div style="padding: 16px; background: white; border-left: 3px solid #f59e0b; border-radius: 8px;">
-                    <strong style="color: #92400e;">Remover castigos:</strong>
-                    <span style="color: #64748b;">Solo Moderator con autorización explícita de Admin.</span>
-                </div>
-                
-                <div style="padding: 16px; background: white; border-left: 3px solid #dc2626; border-radius: 8px;">
-                    <strong style="color: #991b1b;">Abuso de poder:</strong>
-                    <span style="color: #64748b;">Resultará en remoción inmediata del cargo + posible ban.</span>
-                </div>
-                
-                <div style="padding: 16px; background: white; border-left: 3px solid #8b5cf6; border-radius: 8px;">
-                    <strong style="color: #5b21b6;">Dudas:</strong>
-                    <span style="color: #64748b;">SIEMPRE consulta con admins antes de tomar decisiones importantes.</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer style="background: #0f172a; color: white; padding: 60px 40px 40px; text-align: center; margin-top: 80px;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="color: white; font-size: 2em; font-weight: 600; margin-bottom: 16px; border: none; padding: 0;">
-                ¡Gracias por mantener AtheOneDam seguro!
-            </h2>
-            <p style="color: #94a3b8; font-size: 1.125em; line-height: 1.7; margin: 0 0 40px 0;">
-                Tu trabajo hace que la comunidad sea un lugar mejor.<br>
-                Ante cualquier duda, consulta con los admins.
-            </p>
-            <div style="border-top: 1px solid #334155; padding-top: 32px; margin-top: 32px;">
-                <p style="color: #64748b; font-size: 0.875em; margin: 0;">
-                    <strong style="color: #94a3b8;">Documento Confidencial</strong> · Solo para Staff<br>
-                    Versión 2.0 · Octubre 2025 · Sistema LiteBans AtheOneDam
-                </p>
-            </div>
-        </div>
-    </footer>
 
     <!-- External JavaScript -->
     <script src="js/main.js"></script>
