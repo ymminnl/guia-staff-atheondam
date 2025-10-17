@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Back to top button
     createBackToTopButton();
     
-    // Table of contents generator
-    generateTableOfContents();
+    // Table of contents generator - DISABLED
+    // generateTableOfContents();
     
     // Highlight active section on scroll
     highlightActiveSection();
@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Search functionality
     initializeSearch();
+    
+    // Mobile menu functionality
+    initMobileMenu();
 });
 
 // ============================================
@@ -541,16 +544,26 @@ document.addEventListener('DOMContentLoaded', addPrintButton);
 // MOBILE MENU
 // ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
+function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const sidebar = document.querySelector('.sidebar');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
     const body = document.body;
     
-    if (!mobileMenuBtn || !sidebar || !sidebarOverlay) return;
+    console.log('Mobile Menu Setup:', {
+        mobileMenuBtn: !!mobileMenuBtn,
+        sidebar: !!sidebar,
+        sidebarOverlay: !!sidebarOverlay
+    });
+    
+    if (!mobileMenuBtn || !sidebar || !sidebarOverlay) {
+        console.error('Mobile menu elements not found!');
+        return;
+    }
     
     // Toggle mobile menu
     function toggleMobileMenu() {
+        console.log('Toggle menu clicked!');
         sidebar.classList.toggle('open');
         sidebarOverlay.classList.toggle('active');
         body.classList.toggle('sidebar-open');
@@ -598,6 +611,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 250);
     });
-});
+}
 
-console.log('✓ AtheOneDam Staff Guide loaded successfully');
+console.log('✓ AtheOneDam Staff Guide loaded successfully');console.log('✓ AtheOneDam Staff Guide loaded successfully');

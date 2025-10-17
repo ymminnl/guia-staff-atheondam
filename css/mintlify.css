@@ -1145,7 +1145,7 @@ code {
    TABLES - ULTRA PREMIUM
    ======================================== */
 .table-container {
-    overflow-x: auto;
+    overflow-x: visible;
     margin-bottom: var(--spacing-2xl);
     border-radius: var(--radius-xl);
     border: 1px solid var(--color-border);
@@ -2121,6 +2121,7 @@ code {
         transition: transform var(--transition-base);
         z-index: 1000;
         box-shadow: none;
+        animation: none; /* Desactivar animación en móvil */
     }
     
     .sidebar.open {
@@ -2155,6 +2156,24 @@ code {
         --navbar-height: 64px;
         --spacing-4xl: 2.5rem;
         --spacing-3xl: 2rem;
+    }
+    
+    /* Desactivar animaciones en móvil para carga instantánea */
+    .navbar {
+        animation: none;
+    }
+    
+    .sidebar {
+        animation: none;
+    }
+    
+    .hero-title,
+    .hero-description,
+    .badge,
+    .card,
+    .step,
+    .example-card {
+        animation: none;
     }
     
     .navbar-container {
@@ -2293,24 +2312,45 @@ code {
     /* Tables - Mobile Responsive */
     .table-container {
         border-radius: var(--radius-lg);
+        overflow-x: visible;
     }
     
     .table {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        display: block;
+        overflow-x: visible;
     }
     
     .table th,
     .table td {
         padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.7rem;
+        word-break: break-word;
     }
     
     .table th {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        font-weight: 700;
     }
     
-    /* Hacer tablas scrolleables horizontalmente en mobile */
-    .table-container {
-        -webkit-overflow-scrolling: touch;
+    /* Responsive table layout */
+    .table thead {
+        display: table;
+        width: 100%;
+    }
+    
+    .table tbody {
+        display: table;
+        width: 100%;
+    }
+    
+    .table tr {
+        display: table-row;
+    }
+    
+    .table th,
+    .table td {
+        display: table-cell;
     }
     
     .callout {
