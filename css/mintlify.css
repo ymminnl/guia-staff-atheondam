@@ -906,10 +906,11 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
-    transform: scaleX(0); /* ✅ OCULTO por defecto */
+    transform: scaleX(0);
     transform-origin: left;
-    transition: transform var(--transition-slow);
-    opacity: 0; /* ✅ AÑADIDO para asegurar que esté invisible */
+    transition: transform var(--transition-slow), opacity var(--transition-fast);
+    opacity: 0;
+    visibility: hidden; /* ✅ AÑADIDO para asegurar que esté completamente oculto */
 }
 
 .card:hover {
@@ -920,7 +921,8 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 
 .card:hover::before {
     transform: scaleX(1);
-    opacity: 1; /* ✅ VISIBLE al hacer hover */
+    opacity: 1;
+    visibility: visible; /* ✅ VISIBLE al hacer hover */
 }
 
 .card-icon {
@@ -1250,6 +1252,7 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 
 .table thead {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+    position: relative; /* ✅ CRÍTICO: Para que ::after se posicione relativo al thead */
 }
 
 .table thead::after {
@@ -1260,6 +1263,7 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     right: 0;
     height: 2px;
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    z-index: 1; /* ✅ Por encima del background */
 }
 
 .table th {
