@@ -124,7 +124,6 @@ function generateTableOfContents() {
     `;
     
     headings.forEach((heading, index) => {
-        // Add ID to heading if it doesn't have one
         if (!heading.id) {
             heading.id = `section-${index}`;
         }
@@ -169,7 +168,6 @@ function generateTableOfContents() {
     tocContainer.appendChild(tocList);
     document.body.appendChild(tocContainer);
     
-    // Show TOC on larger screens
     if (window.innerWidth > 1400) {
         tocContainer.style.display = 'block';
     }
@@ -346,7 +344,6 @@ function initializeSearch() {
     const searchResults = document.getElementById('search-results');
     const searchClose = document.getElementById('search-close');
     
-    // Keyboard shortcut: / to open search
     document.addEventListener('keydown', (e) => {
         if (e.key === '/' && !searchInput.matches(':focus')) {
             e.preventDefault();
@@ -358,10 +355,8 @@ function initializeSearch() {
         }
     });
     
-    // Close search
     searchClose.addEventListener('click', hideSearch);
     
-    // Search input
     searchInput.addEventListener('input', performSearch);
     
     function showSearch() {
@@ -408,7 +403,7 @@ function initializeSearch() {
             }
         });
         
-        displayResults(results.slice(0, 10)); // Show max 10 results
+        displayResults(results.slice(0, 10));
     }
     
     function displayResults(results) {
@@ -432,7 +427,6 @@ function initializeSearch() {
         
         searchResults.style.display = 'block';
         
-        // Add click handlers
         document.querySelectorAll('.search-result-item').forEach((item, index) => {
             item.addEventListener('click', () => {
                 results[index].element.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -493,7 +487,6 @@ window.toggleMobileMenuGlobal = function() {
     const overlay = document.getElementById('sidebarOverlay');
     const body = document.body;
     
-    // Verificar elementos
     console.log('📋 Verificación de elementos:');
     console.log('  - Sidebar:', sidebar ? '✅ ENCONTRADO' : '❌ NO ENCONTRADO');
     console.log('  - Overlay:', overlay ? '✅ ENCONTRADO' : '❌ NO ENCONTRADO');
@@ -512,7 +505,6 @@ window.toggleMobileMenuGlobal = function() {
         return;
     }
     
-    // Verificar estado actual
     const tieneClaseOpen = sidebar.classList.contains('open');
     console.log('\n📊 Estado ANTES del toggle:');
     console.log('  - sidebar.classList:', sidebar.classList.toString());
@@ -520,9 +512,7 @@ window.toggleMobileMenuGlobal = function() {
     console.log('  - overlay.classList:', overlay.classList.toString());
     console.log('  - body.style.overflow:', body.style.overflow || 'normal');
     
-    // TOGGLE
     if (tieneClaseOpen) {
-        // CERRAR
         console.log('\n🔴 CERRANDO sidebar...');
         sidebar.classList.remove('open');
         overlay.classList.remove('active');
@@ -530,7 +520,6 @@ window.toggleMobileMenuGlobal = function() {
         body.style.overflow = '';
         console.log('✅ Sidebar CERRADO');
     } else {
-        // ABRIR
         console.log('\n🟢 ABRIENDO sidebar...');
         sidebar.classList.add('open');
         overlay.classList.add('active');
@@ -539,7 +528,6 @@ window.toggleMobileMenuGlobal = function() {
         console.log('✅ Sidebar ABIERTO');
     }
     
-    // Verificar estado después
     console.log('\n📊 Estado DESPUÉS del toggle:');
     console.log('  - sidebar.classList:', sidebar.classList.toString());
     console.log('  - overlay.classList:', overlay.classList.toString());
@@ -557,7 +545,6 @@ window.toggleSidebarPC = function() {
         return;
     }
     
-    // Verificar si está abierto (sin transform o con translateX(0))
     const computedStyle = window.getComputedStyle(sidebar);
     const transform = computedStyle.transform;
     const estaAbierto = transform === 'none' || transform === 'matrix(1, 0, 0, 1, 0, 0)';
@@ -566,7 +553,6 @@ window.toggleSidebarPC = function() {
     console.log('Estado actual:', estaAbierto ? 'ABIERTO' : 'CERRADO');
     
     if (estaAbierto) {
-        // CERRAR
         sidebar.style.transform = 'translateX(-100%)';
         if (mainContent) {
             mainContent.style.marginLeft = '0';
@@ -578,7 +564,6 @@ window.toggleSidebarPC = function() {
         }
         console.log('✅ Sidebar CERRADO');
     } else {
-        // ABRIR
         sidebar.style.transform = 'translateX(0)';
         if (mainContent) {
             mainContent.style.marginLeft = 'var(--sidebar-width)';
@@ -609,7 +594,6 @@ function initMobileMenu() {
     
     console.log('✅ Sidebar elements found!');
     
-    // Close mobile menu function
     function closeMobileMenu() {
         console.log('🔴 Cerrando sidebar desde overlay/link');
         sidebar.classList.remove('open');
@@ -618,23 +602,19 @@ function initMobileMenu() {
         body.style.overflow = '';
     }
     
-    // Event: Click en overlay para cerrar
     sidebarOverlay.addEventListener('click', closeMobileMenu);
     
-    // Event: Click en links del sidebar para cerrar
     const sidebarLinks = sidebar.querySelectorAll('.sidebar-link');
     sidebarLinks.forEach(link => {
         link.addEventListener('click', closeMobileMenu);
     });
     
-    // Event: Tecla ESC para cerrar
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && sidebar.classList.contains('open')) {
             closeMobileMenu();
         }
     });
     
-    // Event: Resize - cerrar si pantalla se agranda
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
