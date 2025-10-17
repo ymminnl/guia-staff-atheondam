@@ -544,26 +544,65 @@ document.addEventListener('DOMContentLoaded', addPrintButton);
 // MOBILE MENU
 // ============================================
 
+// Función global para toggle (backup para onclick)
+window.toggleMobileMenuGlobal = function() {
+    console.log('🌍 Global toggle called!');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const body = document.body;
+    
+    if (sidebar && overlay) {
+        sidebar.classList.toggle('open');
+        overlay.classList.toggle('active');
+        body.classList.toggle('sidebar-open');
+        
+        if (sidebar.classList.contains('open')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+    }
+};
+
 function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const sidebar = document.querySelector('.sidebar');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
     const body = document.body;
     
-    console.log('Mobile Menu Setup:', {
+    console.log('🔍 Mobile Menu Setup:', {
         mobileMenuBtn: !!mobileMenuBtn,
         sidebar: !!sidebar,
-        sidebarOverlay: !!sidebarOverlay
+        sidebarOverlay: !!sidebarOverlay,
+        buttonElement: mobileMenuBtn
     });
     
-    if (!mobileMenuBtn || !sidebar || !sidebarOverlay) {
-        console.error('Mobile menu elements not found!');
+    if (!mobileMenuBtn) {
+        console.error('❌ Mobile menu button NOT FOUND!');
         return;
     }
     
+    if (!sidebar) {
+        console.error('❌ Sidebar NOT FOUND!');
+        return;
+    }
+    
+    if (!sidebarOverlay) {
+        console.error('❌ Sidebar overlay NOT FOUND!');
+        return;
+    }
+    
+    console.log('✅ All mobile menu elements found!');
+    
     // Toggle mobile menu
-    function toggleMobileMenu() {
-        console.log('Toggle menu clicked!');
+    function toggleMobileMenu(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('🔘 Toggle menu clicked!');
+        
+        const isOpen = sidebar.classList.contains('open');
+        console.log('Current state:', isOpen ? 'OPEN' : 'CLOSED');
+        
         sidebar.classList.toggle('open');
         sidebarOverlay.classList.toggle('active');
         body.classList.toggle('sidebar-open');
@@ -585,7 +624,10 @@ function initMobileMenu() {
     }
     
     // Event listeners
-    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    console.log('📌 Attaching click event to mobile menu button...');
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu, false);
+    console.log('✅ Click event attached!');
+    
     sidebarOverlay.addEventListener('click', closeMobileMenu);
     
     // Close menu when clicking a sidebar link
