@@ -1,16 +1,5 @@
-/**
- * AtheOneDam Staff Guide - Main JavaScript
- * Version 2.0 - Octubre 2025
- */
 
-// ============================================
-// NAVIGATION & SCROLL
-// ============================================
-
-// Smooth scroll to anchor links
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Smooth scroll for all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -24,28 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Back to top button
     createBackToTopButton();
-    
-    // Table of contents generator - DISABLED
-    // generateTableOfContents();
-    
-    // Highlight active section on scroll
     highlightActiveSection();
-    
-    // Copy code blocks functionality
     addCopyButtonsToCodeBlocks();
-    
-    // Search functionality
     initializeSearch();
-    
-    // Mobile menu functionality
     initMobileMenu();
 });
-
-// ============================================
-// BACK TO TOP BUTTON
-// ============================================
 
 function createBackToTopButton() {
     const button = document.createElement('button');
@@ -83,8 +56,6 @@ function createBackToTopButton() {
     `;
     
     document.body.appendChild(button);
-    
-    // Show/hide button on scroll
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
             button.style.opacity = '1';
@@ -94,16 +65,12 @@ function createBackToTopButton() {
             button.style.visibility = 'hidden';
         }
     });
-    
-    // Scroll to top on click
     button.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     });
-    
-    // Hover effect
     button.addEventListener('mouseenter', () => {
         button.style.transform = 'translateY(-3px)';
         button.style.boxShadow = '0 6px 16px rgba(102, 126, 234, 0.5)';
@@ -114,10 +81,6 @@ function createBackToTopButton() {
         button.style.boxShadow = '0 4px 12px rgba(102, 126, 234, 0.4)';
     });
 }
-
-// ============================================
-// TABLE OF CONTENTS GENERATOR
-// ============================================
 
 function generateTableOfContents() {
     const content = document.querySelector('.content-section');
@@ -220,10 +183,6 @@ function generateTableOfContents() {
     });
 }
 
-// ============================================
-// HIGHLIGHT ACTIVE SECTION
-// ============================================
-
 function highlightActiveSection() {
     const sections = document.querySelectorAll('h2[id]');
     const tocLinks = document.querySelectorAll('.toc-link');
@@ -255,10 +214,6 @@ function highlightActiveSection() {
         });
     });
 }
-
-// ============================================
-// COPY CODE BLOCKS
-// ============================================
 
 function addCopyButtonsToCodeBlocks() {
     const codeBlocks = document.querySelectorAll('pre code');
@@ -317,10 +272,6 @@ function addCopyButtonsToCodeBlocks() {
         pre.appendChild(button);
     });
 }
-
-// ============================================
-// SEARCH FUNCTIONALITY
-// ============================================
 
 function initializeSearch() {
     // Create search container
@@ -495,11 +446,6 @@ function initializeSearch() {
     }
 }
 
-// ============================================
-// UTILITY FUNCTIONS
-// ============================================
-
-// Print button functionality
 function addPrintButton() {
     const hero = document.querySelector('.hero');
     if (!hero) return;
@@ -537,14 +483,7 @@ function addPrintButton() {
     hero.appendChild(printBtn);
 }
 
-// Initialize print button
 document.addEventListener('DOMContentLoaded', addPrintButton);
-
-// ============================================
-// SIDEBAR TOGGLE - PC & MÓVIL
-// ============================================
-
-// MÓVIL: Toggle del sidebar
 window.toggleMobileMenuGlobal = function() {
     console.log('═══════════════════════════════════════');
     console.log('🌍 MOBILE TOGGLE EJECUTADO');
@@ -607,8 +546,6 @@ window.toggleMobileMenuGlobal = function() {
     console.log('  - body.style.overflow:', body.style.overflow || 'normal');
     console.log('═══════════════════════════════════════\n');
 };
-
-// PC: Toggle del sidebar
 window.toggleSidebarPC = function() {
     console.log('💻 PC SIDEBAR TOGGLE');
     const sidebar = document.querySelector('.sidebar');
@@ -708,5 +645,3 @@ function initMobileMenu() {
         }, 250);
     });
 }
-
-console.log('✓ AtheOneDam Staff Guide loaded successfully');console.log('✓ AtheOneDam Staff Guide loaded successfully');
