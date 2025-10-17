@@ -1228,22 +1228,21 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
    TABLES - ULTRA PREMIUM
    ======================================== */
 .table-container {
-    overflow-x: auto; /* Permitir scroll horizontal si es necesario */
+    width: 100%;
+    overflow-x: auto;
     margin-bottom: var(--spacing-2xl);
     border-radius: var(--radius-xl);
     border: 1px solid var(--color-border);
     box-shadow: var(--shadow-md);
     background: var(--color-bg-elevated);
-    -webkit-overflow-scrolling: touch; /* Smooth scroll en iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
 .table {
     width: 100%;
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 0;
-    font-size: var(--font-size-sm);
-    table-layout: auto; /* CAMBIO: Auto para que se ajuste al contenido */
-    min-width: 600px; /* Ancho mínimo para mantener legibilidad */
+    font-size: 0.875rem;
 }
 
 .table thead {
@@ -1264,7 +1263,7 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 }
 
 .table th {
-    padding: 1rem 1.25rem;
+    padding: 1rem 1.5rem;
     text-align: left;
     font-weight: 700;
     color: var(--color-text-primary);
@@ -1272,40 +1271,52 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     font-size: 0.75rem;
     letter-spacing: 0.05em;
     border-bottom: 2px solid var(--color-border);
-    vertical-align: top;
-    white-space: nowrap; /* Evitar saltos en headers */
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+    white-space: nowrap;
 }
 
-/* Ancho de columnas - Sin porcentajes, usar auto con min-width */
-.table th:nth-child(1),
-.table td:nth-child(1) {
-    min-width: 220px; /* COMANDO: ancho mínimo para código */
+/* Primera columna: COMANDO */
+.table th:first-child {
+    width: 35%;
 }
 
-.table th:nth-child(2),
-.table td:nth-child(2) {
-    min-width: 180px; /* DESCRIPCIÓN: ancho mínimo */
+/* Segunda columna: DESCRIPCIÓN */
+.table th:nth-child(2) {
+    width: 35%;
 }
 
-.table th:nth-child(3),
-.table td:nth-child(3) {
-    min-width: 200px; /* EJEMPLO: ancho mínimo para código */
+/* Tercera columna: EJEMPLO */
+.table th:last-child {
+    width: 30%;
 }
 
 .table td {
-    padding: 1rem 1.25rem;
+    padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--color-border-light);
     color: var(--color-text-secondary);
     line-height: 1.8;
-    transition: all var(--transition-fast);
-    vertical-align: top;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    vertical-align: middle;
+}
+
+/* Primera columna: COMANDO */
+.table td:first-child {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    width: 35%;
+}
+
+/* Segunda columna: DESCRIPCIÓN */
+.table td:nth-child(2) {
+    width: 35%;
+}
+
+/* Tercera columna: EJEMPLO */
+.table td:last-child {
+    width: 30%;
 }
 
 .table tbody tr {
-    transition: all var(--transition-base);
+    transition: all 0.2s ease;
     position: relative;
 }
 
@@ -1318,7 +1329,7 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     height: 100%;
     background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
     transform: scaleY(0);
-    transition: transform var(--transition-base);
+    transition: transform 0.2s ease;
 }
 
 .table tbody tr:hover::before {
@@ -1331,24 +1342,20 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
 
 .table tbody tr:hover {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.04) 0%, rgba(139, 92, 246, 0.04) 100%);
-    transform: translateX(4px);
-}
-
-.table td:first-child {
-    font-weight: 600;
-    color: var(--color-text-primary);
 }
 
 /* Código dentro de tablas */
 .table code {
+    display: inline-block;
     font-family: 'Courier New', Consolas, Monaco, monospace;
-    font-size: 0.8rem;
+    font-size: 0.813rem;
     padding: 0.25rem 0.5rem;
-    background: rgba(99, 102, 241, 0.08);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 4px;
     color: var(--color-primary);
-    white-space: nowrap;
     font-weight: 500;
+    line-height: 1.4;
 }
 
 /* ========================================
@@ -2439,47 +2446,27 @@ body.sidebar-collapsed .sidebar-toggle-btn svg {
     /* Tables - Mobile Responsive */
     .table-container {
         border-radius: var(--radius-lg);
-        overflow-x: auto; /* Scroll horizontal en móvil */
+        overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
     
     .table {
-        font-size: 0.8rem;
-        min-width: 600px; /* Forzar ancho mínimo para que tenga scroll */
-        table-layout: auto; /* Auto layout en móvil */
+        font-size: 0.813rem;
     }
     
     .table th {
-        padding: 0.75rem 1rem;
-        font-size: 0.7rem;
-        font-weight: 700;
-        white-space: nowrap;
+        padding: 0.875rem 1rem;
+        font-size: 0.75rem;
     }
     
     .table td {
-        padding: 0.75rem 1rem;
-        font-size: 0.75rem;
+        padding: 0.875rem 1rem;
+        font-size: 0.813rem;
         line-height: 1.6;
     }
     
-    /* Anchos mínimos en móvil */
-    .table th:nth-child(1),
-    .table td:nth-child(1) {
-        min-width: 200px;
-    }
-    
-    .table th:nth-child(2),
-    .table td:nth-child(2) {
-        min-width: 160px;
-    }
-    
-    .table th:nth-child(3),
-    .table td:nth-child(3) {
-        min-width: 180px;
-    }
-    
     .table code {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         padding: 0.2rem 0.4rem;
     }
     
