@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- External CSS -->
-    <link rel="stylesheet" href="css/mintlify.css?v=9.0">
+    <link rel="stylesheet" href="css/mintlify.css?v=10.0">
 </head>
 <body>
     
@@ -61,8 +61,16 @@
 
     <div class="layout">
         
+        <!-- Sidebar Toggle Button (PC) -->
+        <button class="sidebar-toggle-btn" id="sidebarTogglePC" aria-label="Toggle Sidebar" onclick="toggleSidebarPC()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="18" rx="1"/>
+                <path d="M14 4l6 8-6 8"/>
+            </svg>
+        </button>
+        
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-content">
                 <div class="sidebar-section">
                     <div class="sidebar-label">INTRODUCCIÓN</div>

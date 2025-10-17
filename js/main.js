@@ -541,27 +541,51 @@ function addPrintButton() {
 document.addEventListener('DOMContentLoaded', addPrintButton);
 
 // ============================================
-// MOBILE MENU
+// MOBILE MENU & SIDEBAR TOGGLE
 // ============================================
 
-// Función global para toggle (backup para onclick)
+// Función ULTRA SIMPLE para toggle móvil
 window.toggleMobileMenuGlobal = function() {
-    console.log('🌍 Global toggle called!');
+    console.log('🌍 MOBILE TOGGLE CLICKED!');
     const sidebar = document.querySelector('.sidebar');
     const overlay = document.getElementById('sidebarOverlay');
     const body = document.body;
     
-    if (sidebar && overlay) {
-        sidebar.classList.toggle('open');
-        overlay.classList.toggle('active');
-        body.classList.toggle('sidebar-open');
-        
-        if (sidebar.classList.contains('open')) {
-            body.style.overflow = 'hidden';
-        } else {
-            body.style.overflow = '';
-        }
+    console.log('Elements found:', { sidebar: !!sidebar, overlay: !!overlay });
+    
+    if (!sidebar || !overlay) {
+        console.error('❌ Missing elements!');
+        return;
     }
+    
+    const isOpen = sidebar.classList.contains('open');
+    console.log('Current state:', isOpen ? 'OPEN' : 'CLOSED');
+    
+    if (isOpen) {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+        body.classList.remove('sidebar-open');
+        body.style.overflow = '';
+        console.log('✅ CLOSED sidebar');
+    } else {
+        sidebar.classList.add('open');
+        overlay.classList.add('active');
+        body.classList.add('sidebar-open');
+        body.style.overflow = 'hidden';
+        console.log('✅ OPENED sidebar');
+    }
+};
+
+// Función para toggle del sidebar en PC
+window.toggleSidebarPC = function() {
+    console.log('💻 PC TOGGLE CLICKED!');
+    const body = document.body;
+    const sidebar = document.querySelector('.sidebar');
+    
+    body.classList.toggle('sidebar-collapsed');
+    sidebar.classList.toggle('collapsed');
+    
+    console.log('Sidebar state:', body.classList.contains('sidebar-collapsed') ? 'COLLAPSED' : 'EXPANDED');
 };
 
 function initMobileMenu() {
